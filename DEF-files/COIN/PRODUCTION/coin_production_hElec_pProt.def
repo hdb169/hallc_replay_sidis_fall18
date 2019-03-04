@@ -5,6 +5,7 @@ block H.cer.npeSum
 block H.cal.eprtracknorm
 block H.cal.etottracknorm
 block H.gtr.beta
+block H.cal.etotnorm
 
 block P.gtr.dp
 block P.hod.beta
@@ -13,3 +14,7 @@ block P.aero.npeSum
 block P.cal.eprtracknorm
 block P.cal.etottracknorm
 block P.gtr.beta
+block P.cal.etotnorm
+
+
+
