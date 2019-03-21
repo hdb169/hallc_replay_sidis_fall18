@@ -1,53 +1,27 @@
 
+block T.coin.*
+block CTime*
+#block T.helicity.*
 
-block H.hod.beta
-block H.gtr.dp
-block H.cal.etottracknorm
-block H.cal.eprtracknorm
-block H.cer.npeSum
-block H.gtr.beta
-block T.coin.pRF_tdcTime
+block H.cer.*
+block H.dc.*
+block H.tr.*
+block H.hod.*
+block H.cal.*
+block H.gtr.*
+block H.kin.*
+#block H.rb.*
+#block H.react.*
+#block H.bcm.*
 
-block P.hod.beta
-block P.gtr.dp
-block P.cal.etottracknorm
-block P.cal.eprtracknorm
-block P.aero.npeSum
-block P.hgcer.npeSum
-block P.gtr.beta
-
-
-block P.dc.x_fp
-block P.dc.xp_fp
-block P.dc.y_fp
-block P.dc.yp_fp
-block P.gtr.beta
-block P.gtr.dp
-block P.gtr.p
-block P.gtr.ph
-block P.gtr.px
-block P.gtr.py
-block P.gtr.pz
-block P.gtr.th
-block P.gtr.x
-block P.gtr.y
-
-
-
-block H.dc.x_fp
-block H.dc.xp_fp
-block H.dc.y_fp
-block H.dc.yp_fp
-block H.gtr.beta
-block H.gtr.dp
-block H.gtr.p
-block H.gtr.ph
-block H.gtr.px
-block H.gtr.py
-block H.gtr.pz
-block H.gtr.th
-block H.gtr.x
-block H.gtr.y
-
-block CTime.*
-block T.coin.pRF_*
+#block P.ngcer.*
+block P.dc.*
+block P.tr.*
+block P.hod.*
+block P.hgcer.*
+block P.aero.*
+block P.cal.*
+block P.gtr.*
+block P.kin.*
+#block P.rb.*
+#block P.react.*

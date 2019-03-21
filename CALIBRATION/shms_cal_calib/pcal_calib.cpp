@@ -50,7 +50,7 @@ void pcal_calib(string Prefix, int nstop=-1, int nstart=0) {
   Canvas->cd(3);
   gStyle->SetOptFit();
 
-  theShowerCalib.hEcal->Fit("gaus","O","",0.5,1.5);
+  theShowerCalib.hEcal->Fit("gaus","O","",0.7,1.333);
   TF1 *fit = theShowerCalib.hEcal->GetFunction("gaus");
   Double_t gmean  = fit->GetParameter(1);
   Double_t gsigma = fit->GetParameter(2);
