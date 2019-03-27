@@ -51,6 +51,23 @@ IPM3H07B.XSOF
 IPM3H07B.YSOF
 IPM3H07C.XSOF
 IPM3H07C.YSOF
+
+hcL2_Fan_Freq_R 
+hcL3_Fan_Freq_R 
+hcLS218_1_T5                   
+hcLS218_1_T6                   
+hcLS218_1_T7                   
+hcLS218_2_T5                   
+hcLS218_2_T6                   
+hcLS218_2_T7                   
+hcLS218_3_T5                   
+hcLS218_3_T6                  
+hcLS218_3_T7                  
+
+HALLC:p 
+
+
+
 end epics
 
 #include "DEF-files/COIN/PRODUCTION/GTR/coin_gtr_histos.def"
