@@ -23,7 +23,7 @@ int main_calib()
   //DC_calib obj("SHMS", "../../../ROOTfiles/shms_replay_production_all_2774_-1.root", 2774, -1, "pid_elec"); 
   //  DC_calib obj("SHMS", "~/abishek/hallc_replay/ROOTfiles/shms_replay_production_all_1791_-1.root", 1791, 10000000, "pid_elec", "card");
     
-  DC_calib obj("HMS", "../../../ROOTfiles/hms_replay_production_all_2369_500000.root", 2369, 500000, "pid_elec", "card");                                                                                                        
+  DC_calib obj("SHMS", "../../../ROOTfiles/coin_replay_production_6091_20000.root", 6091, 20000, "pid_kFALSE", "card");                                                                                                        
   //DC_calib obj("SHMS", "../../../ROOTfiles/shms_replay_production_all_7110_500000.root", 7110, 500000, "pid_elec", "card");                                                                                                        
 
 
