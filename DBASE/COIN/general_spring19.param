@@ -77,8 +77,3 @@ cminch=2.54
 #include "PARAM/SHMS/AERO/paero_calib.param"
 #include "PARAM/SHMS/CAL/pcal_calib_7109.param"
 
-;commented out May 23, 2019
-;#include "PARAM/SHMS/DC/pdc_calib_7679.param"
-;#include "PARAM/SHMS/DC/pdc_tzero_per_wire_7679.param"
-;#include "PARAM/HMS/DC/hdc_calib_7679.param"
-;#include "PARAM/HMS/DC/hdc_tzero_per_wire_7679.param"
