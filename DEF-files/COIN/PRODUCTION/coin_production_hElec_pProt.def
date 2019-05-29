@@ -1,32 +1,29 @@
-block T.coin.*
-block CTime*
-block T.helicity.*
 
-block T.shms.*
-block T.hms.*
+block CTime.ePiCoinTime_ROC2
 
-block H.cer.*
+block H.cer.npeSum
 block H.dc.*
-block H.tr.*
-block H.hod.*
-block H.cal.*
-block H.gtr.*
-block H.kin.*
-block H.rb.*
-block H.react.*
-#block H.bcm.*
+block H.hod.beta
+block H.hod.goodstarttime
+block H.cal.etottracknorm
+block H.gtr.beta
+block H.gtr.dp
+block H.cal.etotnorm
+block H.cal.eprtracknorm
 
-block P.ngcer.*
+
+block P.ngcer.npeSum
 block P.dc.*
-block P.tr.*
-block P.hod.*
-block P.hgcer.*
-block P.aero.*
-block P.cal.*
-block P.gtr.*
-block P.kin.*
-#block P.rb.*
-block P.react.*
+block P.hod.beta
+block P.hod.goodstarttime
+block P.hgcer.npeSum
+block P.aero.npeSum
+block P.cal.etottracknorm
+block P.cal.eprtracknorm
+block P.cal.etotnorm
+block P.gtr.beta
+block P.gtr.dp
+
 
 
 #include "DEF-files/COIN/EPICS/epics_short.def"
