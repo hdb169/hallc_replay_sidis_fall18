@@ -117,8 +117,8 @@ pdc_xpos = pdc_xcenter[0]-0.006
            pdc_xcenter[1]+0.014
            pdc_xcenter[1]
            pdc_xcenter[1]
-           pdc_xcenter[1]
-           pdc_xcenter[1]
+           pdc_xcenter[1]-0.01
+           pdc_xcenter[1]+0.001
            
 ; y position in cm defaults to global
 pdc_ypos = pdc_ycenter[0]-0.009
@@ -131,8 +131,8 @@ pdc_ypos = pdc_ycenter[0]-0.009
            pdc_ycenter[1]+0.018
            pdc_ycenter[1]
            pdc_ycenter[1]
-           pdc_ycenter[1]
-           pdc_ycenter[1]
+           pdc_ycenter[1]-0.003
+           pdc_ycenter[1]-0.001
 
 
 ; z position in cm of each plane measured from focal plane.
