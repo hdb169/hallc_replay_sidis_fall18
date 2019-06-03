@@ -1,6 +1,8 @@
 
 block CTime.ePiCoinTime_ROC2
 
+block P.dc.*
+block H.dc.*
 
 block P.cal.pr.goodPosAdcPulseInt
 block P.cal.pr.goodNegAdcPulseInt
