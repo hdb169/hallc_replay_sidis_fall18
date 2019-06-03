@@ -1,0 +1,18 @@
+; Calibration constants for file coin_replay_production_6088_100000, 0 events processed
+
+pcal_neg_gain_cor =  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+pcal_pos_gain_cor =  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+pcal_arr_gain_cor =  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,
+                     -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,  -nan,

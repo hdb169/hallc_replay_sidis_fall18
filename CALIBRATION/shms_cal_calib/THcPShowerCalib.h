@@ -247,7 +247,7 @@ void THcPShowerCalib::ReadThresholds() {
   iss >> fEuncNBin;
   getline(fin, line);  iss.str(line);
   iss >> fEuncGFitLo >> fEuncGFitHi;
-
+  cout<<"check fEuncGFitlo and hi "<<fEuncGFitLo<<" "<<fEuncGFitHi<<endl;
   getline(fin, line);
   getline(fin, line);
   getline(fin, line);
@@ -338,7 +338,7 @@ void THcPShowerCalib::Init() {
 
   gROOT->Reset();
 
-  char* fname = Form("ROOTfiles/%s.root",fPrefix.c_str());
+  char* fname = Form("/u/group/c-csv/hdbhatt/ROOTfiles/cal_calib_june1/%s.root",fPrefix.c_str());
   cout << "THcPShowerCalib::Init: Root file name = " << fname << endl;
 
   TFile *f = new TFile(fname);
@@ -373,7 +373,7 @@ void THcPShowerCalib::Init() {
   fTree->SetBranchAddress("P.tr.tg_y",  &P_tr_tg_y, &b_P_tr_tg_y);
  
   fTree->SetBranchAddress("P.hgcer.npe", P_hgcer_npe,&b_P_hgcer_npe);
-  fTree->SetBranchAddress("P.ngcer.npe", P_ngcer_npe,&b_P_ngcer_npe);
+ // fTree->SetBranchAddress("P.ngcer.npe", P_ngcer_npe,&b_P_ngcer_npe);
 
   fTree->SetBranchAddress("P.tr.beta", &P_tr_beta,&b_P_tr_beta);
 
@@ -538,11 +538,11 @@ bool THcPShowerCalib::ReadShRawTrack(THcPShTrack &trk, UInt_t ientry) {
   good_trk = P_tr_xp > -0.045+0.0025*P_tr_x;
   if (!good_trk) return 0;
 
-    bool good_ngcer = P_ngcer_npe[0] > fNGCerMin ||
-  		    P_ngcer_npe[1] > fNGCerMin ||
-  		    P_ngcer_npe[2] > fNGCerMin ||
-  		    P_ngcer_npe[3] > fNGCerMin  ;
-    if(!good_ngcer) return 0;
+  //  bool good_ngcer = P_ngcer_npe[0] > fNGCerMin ||
+  //		    P_ngcer_npe[1] > fNGCerMin ||
+  //		    P_ngcer_npe[2] > fNGCerMin ||
+  //		    P_ngcer_npe[3] > fNGCerMin  ;
+  //  if(!good_ngcer) return 0;
 
   bool good_hgcer = P_hgcer_npe[0] +
 		    P_hgcer_npe[1] +
@@ -607,20 +607,21 @@ void THcPShowerCalib::ComposeVMs() {
   for (UInt_t ientry=fNstart; ientry<fNstop; ientry++) {
 
     if (ReadShRawTrack(trk, ientry)) {
-
+      // cout<<"check ReadShRawTrack"<<endl;
       // Set energy depositions with default gains.
       // Calculate normalized to the track momentum total energy deposition,
       // check it against the thresholds.
 
       trk.SetEs(falpha0);
       Double_t Enorm = trk.Enorm();
+      // cout <<"check Enorm "<<Enorm<<"  fLoThr "<<fLoThr<<"  fHiThr "<<fHiThr<<"  ientry "<<ientry<<endl;
       if (Enorm>fLoThr && Enorm<fHiThr) {
 
 	trk.SetEs(falpha1);   // Set energies with unit gains for now.
 	// trk.Print(cout);
 
 	fe0 += trk.GetP();    // Accumulate track momenta.
-
+        //cout<<" check trk.GetNhits()"<<trk.GetNhits()<<endl;
 	vector<pmt_hit> pmt_hit_list;     // Container to save PMT hits
 
 	// Loop over hits.
@@ -631,7 +632,7 @@ void THcPShowerCalib::ComposeVMs() {
 	  // hit->Print(cout);
 
 	  UInt_t nb = hit->GetBlkNumber();
-
+          //cout<<" check i "<<i<<" nb "<<nb<<endl;
 	  // Fill the qe and q0 vectors.
 
 	  fqe[nb-1] += hit->GetEdep() * trk.GetP();
@@ -753,7 +754,7 @@ void THcPShowerCalib::SolveAlphas() {
   UInt_t j = 0;
   
   for (UInt_t k=0; k<THcPShTrack::fNcols_pr; k++) {
-    k==0 ? cout << "Preshower:" : cout << "        :";
+    k==0 ? cout << "Check Preshower:" : cout << "        :";
     for (UInt_t i=0; i<THcPShTrack::fNrows_pr; i++)
       cout << setw(6) << fHitCount[j++] << ",";
     cout << endl;
@@ -869,15 +870,9 @@ void THcPShowerCalib::SolveAlphas() {
   // Assign the gain arrays.
 
   for (UInt_t i=0; i<THcPShTrack::fNpmts; i++) {
-    if (fHitCount[i] >= fMinHitCount) {
-      falphaU[i] = au[i];
-      falphaC[i] = ac[i];
-    }
-    else {
-falphaC[i] = Previous Calibration!!!
-    }
+    falphaU[i] = au[i];
+    falphaC[i] = ac[i];
   }
-
 
 }
 
