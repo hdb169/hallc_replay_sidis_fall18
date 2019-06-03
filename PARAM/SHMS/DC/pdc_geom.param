@@ -104,7 +104,7 @@ pdc_wire_counting = 0, 0, 0, 0, 0, 0
 ;           pdc_ycenter[1]+0.0035
 ;           pdc_ycenter[1]-0.006
 
-;below are the offsets changed on May 29, 2019
+;below are the offsets changed on May 29, 2019 by manually trying which values gives the mean closer to zero
 
 ; x position in cm defaults to global
 pdc_xpos = pdc_xcenter[0]-0.006

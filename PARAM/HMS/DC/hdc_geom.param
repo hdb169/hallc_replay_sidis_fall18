@@ -81,6 +81,10 @@ hdc_pitch = 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
 hdc_wire_counting = 0, 0, 0, 0, 0, 0
                     0, 0, 0, 0, 0, 0
 
+
+; all the following offsets were zero before, and there was some zero offsets in the mean of the residuals for various planes, now after manually trying which values work to remove the zero offsets, the following values were taken as the best offset values, (Hem Bhatt, June 3, 2019)
+
+
 ; x position in cm defaults to global
 hdc_xpos = hdc_xcenter[0]-0.01
            hdc_xcenter[0]
