@@ -2,7 +2,7 @@
 block CTime.ePiCoinTime_ROC2
 
 block P.dc.*
-block H.dc.*
+#block H.dc.*
 
 block P.cal.pr.goodPosAdcPulseInt
 block P.cal.pr.goodNegAdcPulseInt
@@ -17,7 +17,7 @@ block P.tr.tg_dp
 block P.tr.tg_ph
 block P.tr.tg_th
 block P.tr.tg_y
-block P.hgcer.npe
+block P.hgcer.*
 block P.ngcer.npe
 block P.tr.beta
 block P.cal.nclust
