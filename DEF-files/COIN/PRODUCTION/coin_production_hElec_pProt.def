@@ -14,7 +14,7 @@ block P.tr.tg_dp
 block P.tr.tg_ph
 block P.tr.tg_th
 block P.tr.tg_y
-block P.hgcer.*
+block P.hgcer.npeSum
 block P.ngcer.npe
 block P.tr.beta
 block P.cal.nclust
@@ -32,7 +32,7 @@ block P.cal.eprtracknorm
 block P.cal.etotnorm
 block P.gtr.beta
 block P.gtr.dp
-
+block P.cal.etot
 
 
 
@@ -67,19 +67,19 @@ block H.cal.eprtracknorm
 
 
 ##check
-block T.coin.*
-block CTime*
+#block T.coin.*
 
 
 
-block H.dc.*
-block H.hod.*
-block H.cal.*
-block H.gtr.*
 
-block P.ngcer.*
-block P.dc.*
-block P.tr.*
-block P.hod.*
+#block H.dc.*
+#block H.hod.*
+#block H.cal.*
+#block H.gtr.*
+
+#block P.ngcer.*
+#block P.dc.*
+#block P.tr.*
+#block P.hod.*
 block P.cal.*
-block P.gtr.*
+#block P.gtr.*
