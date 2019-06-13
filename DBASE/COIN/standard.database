@@ -75,5 +75,3 @@ g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
 
-
-

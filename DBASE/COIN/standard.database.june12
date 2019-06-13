@@ -1,0 +1,159 @@
+0-6008
+g_ctp_parm_filename       = "DBASE/COIN/general_pt.param"
+0-6180
+g_ctp_kinematics_filename = "DBASE/COIN/standard.kinematics"
+0-5417
+g_ctp_map_filename = "MAPS/COIN/DETEC/coin.map"
+0-5417
+g_ctp_trigdet_filename = "PARAM/TRIG/tcoin.param"
+
+5418-6008
+g_ctp_trigdet_filename = "PARAM/TRIG/tcoin_fall18_hRF.param"
+
+5418-6008
+g_ctp_map_filename = "MAPS/COIN/DETEC/coin_fall18.map"
+
+
+# CSV experiment
+6009-6999
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+#to check shms cal calib plus hgcer efficiency (June 4, 2019)
+6084-6090
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_6088.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+
+# jpsi experiment
+# phase 1 kinematics
+7000-7273
+g_ctp_parm_filename       = "DBASE/COIN/general_7000.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+# phase 2 kinematics
+7274-7307
+g_ctp_parm_filename       = "DBASE/COIN/general_7274.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+# phase 3 kinematics
+7308-7408
+g_ctp_parm_filename       = "DBASE/COIN/general_7308.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+# phase 1 kinematics
+7409-7429
+g_ctp_parm_filename       = "DBASE/COIN/general_7000.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+# phase 2 kinematics
+7430-7580
+g_ctp_parm_filename       = "DBASE/COIN/general_7274.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+# CSV experiment: part 2 spring 2019
+7581-99999
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+7671-7674 
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7671-72_-3p5.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+
+7723-7725
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7724_-4p4.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+7620-7634
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7626-7634_-1p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+7611-7619
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7805-7807_-2p3.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+7684-7695
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7805-7807_-2p3.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+7803-7807
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7805-7807_-2p3.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+7605-7610
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7737-7739_-2p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+7675-7682
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7737-7739_-2p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+7737-7749
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7737-7739_-2p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+7798-7802
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7737-7739_-2p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+
+7727-7736
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7671-72_-3p5.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+7793-7797
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_7671-72_-3p5.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
