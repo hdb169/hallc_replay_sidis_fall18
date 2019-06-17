@@ -374,7 +374,7 @@ void THcPShowerCalib::Init() {
   fTree->SetBranchAddress("P.tr.tg_th", &P_tr_tg_th,&b_P_tr_tg_th);
   fTree->SetBranchAddress("P.tr.tg_y",  &P_tr_tg_y, &b_P_tr_tg_y);
  
-  // fTree->SetBranchAddress("P.hgcer.npe", P_hgcer_npe,&b_P_hgcer_npe);
+  fTree->SetBranchAddress("P.hgcer.npe", P_hgcer_npe,&b_P_hgcer_npe);
   fTree->SetBranchAddress("P.ngcer.npe", P_ngcer_npe,&b_P_ngcer_npe);
 
   fTree->SetBranchAddress("P.tr.beta", &P_tr_beta,&b_P_tr_beta);
@@ -548,11 +548,11 @@ bool THcPShowerCalib::ReadShRawTrack(THcPShTrack &trk, UInt_t ientry) {
   		    P_ngcer_npe[3] > fNGCerMin  ;
     if(!good_ngcer) return 0;
 
-  /* bool good_hgcer = P_hgcer_npe[0] + */
-  /* 		    P_hgcer_npe[1] + */
-  /* 		    P_hgcer_npe[2] + */
-  /* 		    P_hgcer_npe[3] > fHGCerMin  ; */
-  /* if(!good_hgcer) return 0; */
+  bool good_hgcer = P_hgcer_npe[0] + 
+  		    P_hgcer_npe[1] + 
+ 		    P_hgcer_npe[2] + 
+  		    P_hgcer_npe[3] > fHGCerMin  ; 
+   if(!good_hgcer) return 0; 
 
   bool good_beta = P_tr_beta > fBetaMin &&
                    P_tr_beta < fBetaMax ;
