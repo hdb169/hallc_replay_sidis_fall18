@@ -21,15 +21,12 @@ g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
 
-#to check shms cal calib plus hgcer efficiency (June 4, 2019)
+#to check shms cal calib  (June 14, 2019)
 6084-6090
 g_ctp_parm_filename       = "DBASE/COIN/general_fall18_6088.param"
 g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
-
-
-
 
 
 # jpsi experiment
@@ -68,10 +65,143 @@ g_ctp_kinematics_filename = "db2/auto_standard_coin.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
 
-# CSV experiment: part 2 spring 2019
+##################################################
+##################################################
+# CSV experiment: part 2 spring 2019 
+#################################################
+#################################################
+
 7581-99999
 g_ctp_parm_filename       = "DBASE/COIN/general_spring19.param"
 g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
 
+############################## momentum based ##################
+#####################19 deg  group 33 -34 ######################
+#3p1
+
+7593-7597
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_19deg_3p1.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+7599-7604
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_19deg_3p1.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+# 19deg 2p6
+
+7605-7610
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_19deg_2p6.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+# 19deg 2p2
+7611-7619
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_19deg_2p2.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+# 19deg 1p7
+
+
+7620-7634
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_19deg_1p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+##################### 13 deg 35 - 36   #######################
+	
+#3p5
+	      
+7671-7674
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_13deg_3p5.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+#2p9
+
+7675-7682
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_13deg_2p9.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+#2p3
+
+7684-7692
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_13deg_2p3.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+######################## 17 deg   37 -38 ####################
+
+#4p4 test runs
+7723-7725
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_17deg_4p4.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+#3p2
+
+7727-7736
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_17deg_3p2.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+#2p7
+
+7737-7749
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_17deg_2p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+#2p2
+
+7750-7759
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_17deg_2p2.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+
+######################## 15 deg   39 - 40 ####################
+#3p4
+
+7793-7797
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_15deg_3p4.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+#2p9
+7798-7802
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_15deg_2p9.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+
+#2p3
+
+7803-7807
+g_ctp_parm_filename       = "DBASE/COIN/general_spring19_15deg_2p3.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
