@@ -307,7 +307,7 @@ void THcShowerCalib::Init() {
   //Reset ROOT and connect tree file.
 
   gROOT->Reset();
-  char* fname = Form("/u/group/c-csv/hdbhatt/ROOTfiles/cal_calib_june1/%s.root",fPrefix.c_str());
+  char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/cal_calib_june12/%s.root",fPrefix.c_str());
   //char* fname = Form("ROOTfiles/%s.root",fPrefix.c_str());
   cout << "THcShowerCalib::Init: Root file name = " << fname << endl;
 

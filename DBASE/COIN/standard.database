@@ -171,7 +171,7 @@ g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
 
 
 #13 deg 2p3 pim
-7684-7692
+7684-7695
 g_ctp_parm_filename       = "DBASE/COIN/general_spring19_13deg_2p3.param"
 g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
