@@ -1,5 +1,5 @@
 
-block CTime.ePiCoinTime_ROC2
+block CTime.*
 
 block P.cal.pr.goodPosAdcPulseInt
 block P.cal.pr.goodNegAdcPulseInt
@@ -64,7 +64,8 @@ block H.gtr.beta
 block H.gtr.dp
 block H.cal.etotnorm
 block H.cal.eprtracknorm
-
+block H.kin.primary.*
+block P.kin.secondary.*
 
 ##check
 #block T.coin.*
@@ -81,5 +82,5 @@ block H.cal.eprtracknorm
 #block P.dc.*
 #block P.tr.*
 #block P.hod.*
-block P.cal.*
+#block P.cal.*
 #block P.gtr.*
