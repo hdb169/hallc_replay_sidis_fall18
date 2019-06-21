@@ -75,12 +75,12 @@ block P.kin.secondary.*
 
 #block H.dc.*
 #block H.hod.*
-#block H.cal.*
+block H.cal.*
 #block H.gtr.*
 
 #block P.ngcer.*
 #block P.dc.*
 #block P.tr.*
 #block P.hod.*
-#block P.cal.*
+block P.cal.*
 #block P.gtr.*
