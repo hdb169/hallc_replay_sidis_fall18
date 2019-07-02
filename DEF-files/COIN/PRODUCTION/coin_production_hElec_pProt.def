@@ -71,16 +71,33 @@ block P.kin.secondary.*
 #block T.coin.*
 
 
-
+block P.gtr.p
+block H.gtr.p
 
 #block H.dc.*
 #block H.hod.*
-block H.cal.*
+#block H.cal.*
 #block H.gtr.*
 
 #block P.ngcer.*
 #block P.dc.*
 #block P.tr.*
 #block P.hod.*
-block P.cal.*
+
+block P.cal.etottracknorm
+block P.cal.eprtracknorm
+block P.cal.eprtrack
+block P.cal.etot
+block P.cal.etotnorm
+block P.cal.etrack
+block P.cal.etracknorm
+
+block H.cal.etottracknorm
+block H.cal.eprtracknorm
+block H.cal.eprtrack
+block H.cal.etot
+block H.cal.etotnorm
+block H.cal.etrack
+block H.cal.etracknorm
+
 #block P.gtr.*
