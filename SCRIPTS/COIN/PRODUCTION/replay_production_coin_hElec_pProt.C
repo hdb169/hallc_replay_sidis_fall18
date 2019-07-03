@@ -24,7 +24,7 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   pathList.push_back("./cache");
 
   //const char* RunFileNamePattern = "raw/coin_all_%05d.dat";
-   const char* ROOTFileNamePattern = "ROOTfiles/yieldratio_june25/coin_replay_production_%d_%d.root";
+   const char* ROOTFileNamePattern = "ROOTfiles/check_spring_coinreftime/coin_replay_production_%d_%d.root";
   //  const char* ROOTFileNamePattern = "ROOTfiles/check_spring_cal_calib_june17/coin_replay_production_%d_%d.root";
 
   // Load global parameters

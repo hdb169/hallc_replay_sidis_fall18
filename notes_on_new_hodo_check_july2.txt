@@ -1,0 +1,5 @@
+1) do referencre time for coin
+2) check hodo calib
+3) check dc calib
+4) check cal calib
+5) take yield ratio for pi+/pi- instead of pi-/pi+
