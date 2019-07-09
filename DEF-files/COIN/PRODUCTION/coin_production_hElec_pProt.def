@@ -1,6 +1,9 @@
-
+block P.dc.*
+block H.dc.*
 block CTime.*
-
+block T.coin.*
+block P.hod.*
+block H.hod.*
 block P.cal.pr.goodPosAdcPulseInt
 block P.cal.pr.goodNegAdcPulseInt
 block P.cal.fly.goodAdcPulseInt
