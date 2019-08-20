@@ -1,0 +1,32 @@
+block P.hod.*
+block H.hod.*
+block CTime.ePiCoinTime_ROC2
+
+block H.cer.npeSum
+block H.dc.*
+block H.hod.beta
+block H.hod.goodstarttime
+block H.cal.etottracknorm
+block H.gtr.beta
+block H.gtr.dp
+block H.cal.etotnorm
+block H.cal.eprtracknorm
+
+
+block P.ngcer.npeSum
+block P.dc.*
+block P.hod.beta
+block P.hod.goodstarttime
+block P.hgcer.npeSum
+block P.aero.npeSum
+block P.cal.etottracknorm
+block P.cal.eprtracknorm
+block P.cal.etotnorm
+block P.gtr.beta
+block P.gtr.dp
+
+
+#include "DEF-files/COIN/EPICS/epics_short.def"
+#include "DEF-files/COIN/PRODUCTION/GTR/coin_gtr_histos.def"
+#include "DEF-files/COIN/PRODUCTION/KIN/coin_hElec_pProt_kin_histos.def"
+#include "DEF-files/COIN/PRODUCTION/TRIG/coin_trig_histos.def"
