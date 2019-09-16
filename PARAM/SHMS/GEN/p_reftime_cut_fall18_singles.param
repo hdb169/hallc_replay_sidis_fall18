@@ -47,13 +47,22 @@
 ;paero_adcrefcut=-5500.
 ;pcal_adcrefcut=-5500.
 
-;Run 7671,7630, 7668
-pdc_tdcrefcut=-15000.
-phodo_tdcrefcut=-4300.
-phodo_adcrefcut=-5500.
-pngcer_adcrefcut=-5500.
-phgcer_adcrefcut=-5500.
-paero_adcrefcut=-5500.
-pcal_adcrefcut=-5500.
+
+;Run 6263,6359 checked May 23 2019 for DC, is fine 
+;pdc_tdcrefcut=-15500.
+;phodo_tdcrefcut=-4300.
+;phodo_adcrefcut=-5500.
+;pngcer_adcrefcut=-5500.
+;phgcer_adcrefcut=-5500.
+;paero_adcrefcut=-5500.
+;pcal_adcrefcut=-5500.
 
 
+;for singles runs only run 6482-6485; Sept 15, 2019
+pdc_tdcrefcut=-15200.
+phodo_tdcrefcut=-4400.
+phodo_adcrefcut=-5200.
+pngcer_adcrefcut=-5200.
+phgcer_adcrefcut=-5200.
+paero_adcrefcut=-5200.
+pcal_adcrefcut=-5200.

@@ -24,6 +24,62 @@ block P.rb.*
 block P.react.*
 
 
+
+
+
+#NEW SEPT 3
+
+block H.bcm.bcm4*
+block T.coin.p*
+block T.coin.h*
+block fEvtHdr.fEvtType
+block H.tr.PruneSelect
+block H.hod.*
+block CTime.ePiCoinTime_ROC2
+block H.cer.npeSum
+block H.dc.*
+
+
+block H.hod.beta
+block H.hod.goodstarttime
+block H.cal.etottracknorm
+block H.gtr.beta
+block H.gtr.dp
+block H.cal.etotnorm
+block H.cal.eprtracknorm
+block H.gtr.ph
+block H.gtr.th
+block H.tr.chi2
+block H.tr.beta
+block H.tr.ndof
+
+
+block P.ngcer.npeSum
+block P.dc.*
+block P.hod.*
+block P.tr.PruneSelect
+
+block P.hod.beta
+block P.hod.goodstarttime
+block P.hgcer.npeSum
+block P.aero.npeSum
+block P.cal.etottracknorm
+block P.cal.eprtracknorm
+block P.cal.etotnorm
+block P.gtr.beta
+block P.gtr.dp
+block P.kin.secondary.pmiss
+block P.kin.secondary.emiss
+block P.kin.secondary.emiss_nuc
+block P.gtr.ph
+block P.gtr.th
+block P.tr.chi2
+block P.tr.beta
+block P.tr.ndof
+
+
+
+
 begin epics
 IBC3H00CRCUR4
 hac_bcm_average

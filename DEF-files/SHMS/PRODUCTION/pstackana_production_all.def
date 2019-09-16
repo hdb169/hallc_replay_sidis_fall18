@@ -1,5 +1,21 @@
-#include "DEF-files/SHMS/PRODUCTION/BLOCK/pblock_vars.def"
+block T.coin.*
+block CTime*
 
+block P.ngcer.*
+block P.dc.*
+block P.tr.*
+block P.hod.*
+block P.hgcer.*
+block P.aero.*
+block P.cal.*
+block P.gtr.*
+block P.kin.*
+block P.rb.*
+block P.react.*
+
+#the above are added on SEPT, 11, 2019
+
+#include "DEF-files/SHMS/PRODUCTION/BLOCK/pblock_vars.def"
 #include "DEF-files/SHMS/TEST_STANDS/AERO/paeroana_histos.def"
 #include "DEF-files/SHMS/TEST_STANDS/CAL/pcalana_histos.def"
 #include "DEF-files/SHMS/TEST_STANDS/DC/pdcana_histos.def"

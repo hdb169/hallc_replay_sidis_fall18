@@ -27,14 +27,14 @@
 
 
 #NEW AUG 20
-block H.bcm.bcm4*
-block T.coin.p*
-block T.coin.h*
+#block H.bcm.bcm4*
+#block T.coin.p*
+#block T.coin.h*
 block fEvtHdr.fEvtType
 block H.tr.PruneSelect
 
 block H.hod.*
-block CTime.ePiCoinTime_ROC2
+#block CTime.ePiCoinTime_ROC2
 
 block H.cer.npeSum
 block H.dc.*
@@ -78,8 +78,3 @@ block P.tr.beta
 block P.tr.ndof
 
 
-
-#include "DEF-files/COIN/EPICS/epics_short.def"
-#include "DEF-files/COIN/PRODUCTION/GTR/coin_gtr_histos.def"
-#include "DEF-files/COIN/PRODUCTION/KIN/coin_hElec_pProt_kin_histos.def"
-#include "DEF-files/COIN/PRODUCTION/TRIG/coin_trig_histos.def"

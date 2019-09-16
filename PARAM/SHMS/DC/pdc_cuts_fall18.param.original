@@ -7,7 +7,7 @@ p_using_tzero_per_wire = 1
 
 ;Run 6263 updated March 27, 2019
 
-; TDC window limits for each plane.SINGLES RUNS ONLY
+; TDC window limits for each plane.
 pdc_tdc_min_win = -12800, -12800, -12800, -12800, -12800, -12800
                   -12800, -12800, -12800, -12800, -12800, -12800
 pdc_tdc_max_win = -11200, -11200, -11200, -11200, -11200, -11200
