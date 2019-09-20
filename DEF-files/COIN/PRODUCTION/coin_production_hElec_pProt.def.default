@@ -1,0 +1,81 @@
+
+#block T.coin.*
+#block CTime*
+
+#block H.cer.*
+#block H.dc.*
+#block H.tr.*
+#block H.hod.*
+#block H.cal.*
+#block H.gtr.*
+#block H.kin.*
+#block H.rb.*
+#block H.react.*
+
+
+#block P.ngcer.*
+#block P.dc.*
+#block P.tr.*
+#block P.hod.*
+#block P.hgcer.*
+#block P.aero.*
+#block P.cal.*
+#block P.gtr.*
+#block P.kin.*
+#block P.react.*
+
+
+
+#NEW AUG 20
+block T.coin.p*
+block T.coin.h*
+
+block H.hod.*
+block CTime.ePiCoinTime_ROC2
+
+block H.cer.npeSum
+block H.dc.*
+
+
+block H.hod.beta
+block H.hod.goodstarttime
+block H.cal.etottracknorm
+block H.gtr.beta
+block H.gtr.dp
+block H.cal.etotnorm
+block H.cal.eprtracknorm
+block H.gtr.ph
+block H.gtr.th
+block H.tr.chi2
+block H.tr.beta
+block H.tr.ndof
+
+
+block P.ngcer.npeSum
+block P.dc.*
+block P.hod.*
+
+block P.hod.beta
+block P.hod.goodstarttime
+block P.hgcer.npeSum
+block P.aero.npeSum
+block P.cal.etottracknorm
+block P.cal.eprtracknorm
+block P.cal.etotnorm
+block P.gtr.beta
+block P.gtr.dp
+block P.kin.secondary.pmiss
+block P.kin.secondary.emiss
+block P.kin.secondary.emiss_nuc
+block P.gtr.ph
+block P.gtr.th
+block P.tr.chi2
+block P.tr.beta
+block P.tr.ndof
+
+
+
+#include "DEF-files/COIN/EPICS/epics_short.def"
+#include "DEF-files/COIN/PRODUCTION/GTR/coin_gtr_histos.def"
+#include "DEF-files/COIN/PRODUCTION/KIN/coin_hElec_pProt_kin_histos.def"
+#include "DEF-files/COIN/PRODUCTION/TRIG/coin_trig_histos.def"
