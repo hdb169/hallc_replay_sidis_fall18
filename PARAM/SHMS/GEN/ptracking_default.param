@@ -1,13 +1,3 @@
-;PARAM/SHMS/GEN/ptracking.param
-;2019 Sept 12 , Mark Jones Changes to this file
-;1)we already selected 25 hits per dc plane, so no need to cut down to < 21 hits,so dont apply nhit cut anymore.
-;2)The pruning algorithm is applied by puting  psel_using_prune = 1 in line num 49.
-;whatever we had earlier is alos included in the git as ptracking.param_beforesep12_2019
-;CHANGES ARE: ORIGINAL_VS_MARK'S_CHANGES
-;1) psel_using_prune = 0 vs  psel_using_prune = 1, around line num = 61
-
-;=================================sept 20 2019=============================================================
-
 ; shms pattern recognition and tracking code parameters
 ; pmax_pr_hits is the maximum number of decoded hits allowed in a chamber for
 ;              pattern recognition to proceed. This protexts against unusual
@@ -56,7 +46,7 @@ pstub_max_xpdiff=.2
 ; psel_using_scin         uses scintillator for track selection
   psel_using_scin = 0
 ; psel_using_prune         using prune
-  psel_using_prune = 1
+  psel_using_prune = 0
 
 ; parameters used in selecting tracks for Hodoscope efficiency in THcHodoEff.cxx
 ;   HodoEff_CalEnergy_Cut  cut on the track energy (GeV)
@@ -65,27 +55,6 @@ pstub_max_xpdiff=.2
   pstat_maxchisq = 10.
   pHodoEff_CalEnergy_Cut = 0.050
   pstat_slop = 2.
-; xptar prune
-pprune_xp = .1
-; yptar prune 
-pprune_yp = .1
-; ytar prune 
-pprune_ytar = 6
-; delta prune 
-pprune_delta = 30
-; beta track = beta mom diff 
-pprune_beta = .5
-; min number of deg of freedom in track 
-pprune_df = 1
-; Number PMT hits    min = 6.0
-pprune_npmt=6
-; chi of beta   min = 2.0
-pprune_chibeta = 100
-; focal plane time - Start time center difference  
-pprune_fptime = 1000. 
-; Prune selects on if hit Y2 plane
-; Prune selects on if hit X2 plane
-; Prune selects on chi2
 
 
 ; pstat_mineff            warning level for scin. effic.
@@ -106,16 +75,12 @@ pprune_fptime = 1000.
 ; pdc_min_plane_eff        warning level for plane effic, measured using tracking
   pdc_min_plane_eff = .95,.95,.95,.95,.95,.95
                       .95,.95,.95,.95,.95,.95
-; Cut on scintillator paddles to select regions for tracking efficiency
-; 1x pad1 center pos = -45. padN pos = -45. + (N-1)*7.5 pad3=-30.  pad11=+30.
-; 2x  pad1 center pos = -61.75 padN pos = -61.75 + (N-1)*9.5 pad3=-42.75 pad11=+42.75
-  pxloscin  = 3, 3
-  pxhiscin  = 11, 12
-; 1y pad1 center pos = +45. padN pos = +45. + (N-1)*7.5 pad4=+22.5  pad10=-22.5
-; 2y  pad1 center pos = +50 padN pos = +50 +  (N-1)*5   pad5=+30.0  pad17=-30.0
-  pyloscin  = 4, 5
-  pyhiscin  = 10, 17
-
+;Derek added this for scintillator based fiducial cuts.  Everything from
+;loscin to hiscin inclusive will be included as "good" scintillator hits.
+  pxloscin  = 4, 4
+  pxhiscin  = 11, 10
+  pyloscin  = 4, 6
+  pyhiscin  = 11, 16
 ;  ptrack_eff_test_scin_planes is the number of planes nec needed to
 ;  set sweet spot to true. 4 is extra clean, 3 is good enough for e-'s.
   ptrack_eff_test_num_scin_planes = 4
