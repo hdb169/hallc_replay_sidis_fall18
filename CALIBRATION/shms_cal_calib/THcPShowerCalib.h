@@ -1,3 +1,5 @@
+
+  
 #ifndef ROOT_THcPShowerCalib
 #define ROOT_THcPShowerCalib
 
@@ -219,7 +221,7 @@ void THcPShowerCalib::ReadThresholds() {
   fBetaMin = 0.;
   fBetaMax = 0.;
   fHGCerMin = 999.;
-  fNGCerMin = 999.;
+  //  fNGCerMin = 999.;//--------------------------------------------->sep 21
   fMinHitCount = 999999;
 
   for (UInt_t ipmt=0; ipmt<THcPShTrack::fNpmts; ipmt++) {
@@ -237,8 +239,8 @@ void THcPShowerCalib::ReadThresholds() {
   iss >> fBetaMin >> fBetaMax;
   getline(fin, line);  iss.str(line);
   iss >> fHGCerMin;
-  getline(fin, line);  iss.str(line);
-  iss >> fNGCerMin;
+  // getline(fin, line);  iss.str(line); //--------------------------------------------->sep 21
+  // iss >> fNGCerMin; //--------------------------------------------->sep 21
   getline(fin, line);  iss.str(line);
   iss >> fMinHitCount;
   getline(fin, line);  iss.str(line);
@@ -338,7 +340,7 @@ void THcPShowerCalib::Init() {
 
   gROOT->Reset();
 
-  char* fname = Form("ROOTfiles/%s.root",fPrefix.c_str());
+  char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/cal_fall18/%s.root",fPrefix.c_str());
   cout << "THcPShowerCalib::Init: Root file name = " << fname << endl;
 
   TFile *f = new TFile(fname);
@@ -373,7 +375,7 @@ void THcPShowerCalib::Init() {
   fTree->SetBranchAddress("P.tr.tg_y",  &P_tr_tg_y, &b_P_tr_tg_y);
  
   fTree->SetBranchAddress("P.hgcer.npe", P_hgcer_npe,&b_P_hgcer_npe);
-  fTree->SetBranchAddress("P.ngcer.npe", P_ngcer_npe,&b_P_ngcer_npe);
+  // fTree->SetBranchAddress("P.ngcer.npe", P_ngcer_npe,&b_P_ngcer_npe);//--------------------------------------------->sep 21
 
   fTree->SetBranchAddress("P.tr.beta", &P_tr_beta,&b_P_tr_beta);
 
@@ -476,8 +478,10 @@ void THcPShowerCalib::CalcThresholds() {
   TF1 *fit = hEunc->GetFunction("gaus");
   Double_t gmean  = fit->GetParameter(1);
   Double_t gsigma = fit->GetParameter(2);
-  fLoThr = gmean - 3.*gsigma;
-  fHiThr = gmean + 3.*gsigma;
+  fLoThr = gmean - 2.5*gsigma;
+  fHiThr = gmean + 2.5*gsigma;
+  // fLoThr = gmean - 2.*gsigma;
+  //fHiThr = gmean + 2.*gsigma;
   cout << "CalcThreshods: fLoThr=" << fLoThr << "  fHiThr=" << fHiThr 
        << "  nev=" << nev << endl;
 
@@ -537,17 +541,17 @@ bool THcPShowerCalib::ReadShRawTrack(THcPShTrack &trk, UInt_t ientry) {
   ////
   good_trk = P_tr_xp > -0.045+0.0025*P_tr_x;
   if (!good_trk) return 0;
-
-    bool good_ngcer = P_ngcer_npe[0] > fNGCerMin ||
-  		    P_ngcer_npe[1] > fNGCerMin ||
-  		    P_ngcer_npe[2] > fNGCerMin ||
-  		    P_ngcer_npe[3] > fNGCerMin  ;
-    if(!good_ngcer) return 0;
+     //commented Sept 21
+    /* bool good_ngcer = P_ngcer_npe[0] > fNGCerMin || */
+    /* 		    P_ngcer_npe[1] > fNGCerMin || */
+    /* 		    P_ngcer_npe[2] > fNGCerMin || */
+    /* 		    P_ngcer_npe[3] > fNGCerMin  ; */
+    /* if(!good_ngcer) return 0; */
 
   bool good_hgcer = P_hgcer_npe[0] +
-		    P_hgcer_npe[1] +
-		    P_hgcer_npe[2] +
-		    P_hgcer_npe[3] > fHGCerMin  ;
+  		    P_hgcer_npe[1] +
+  		    P_hgcer_npe[2] +
+  		    P_hgcer_npe[3] > fHGCerMin  ;
   if(!good_hgcer) return 0;
 
   bool good_beta = P_tr_beta > fBetaMin &&
@@ -691,20 +695,17 @@ void THcPShowerCalib::ComposeVMs() {
   for (UInt_t i=0; i<THcPShTrack::fNpmts; i++)
     q0out << setprecision(20) << fq0[i] << " " << i << endl;
   q0out.close();
-
   ofstream qeout;
   qeout.open("qe.deb",ios::out);
   for (UInt_t i=0; i<THcPShTrack::fNpmts; i++)
     qeout << setprecision(20) << fqe[i] << " " << i << endl;
   qeout.close();
-
   ofstream Qout;
   Qout.open("Q.deb",ios::out);
   for (UInt_t i=0; i<THcPShTrack::fNpmts; i++)
     for (UInt_t j=0; j<THcPShTrack::fNpmts; j++)
       Qout << setprecision(20) << fQ[i][j] << " " << i << " " << j << endl;
   Qout.close();
-
   ofstream sout;
   sout.open("signal.deb",ios::out);
   for (UInt_t i=0; i<THcPShTrack::fNpmts; i++) {
@@ -721,7 +722,6 @@ void THcPShowerCalib::ComposeVMs() {
 	err = rms/TMath::Sqrt(double(nhit));
       }
     }
-
     sout << sig << " " << err << " " << nhit << " " << i << endl;
   }
   sout.close();
@@ -873,9 +873,9 @@ void THcPShowerCalib::SolveAlphas() {
       falphaU[i] = au[i];
       falphaC[i] = ac[i];
     }
-    else {
-falphaC[i] = Previous Calibration!!!
-    }
+   /*  else { */
+/* falphaC[i] = Previous Calibration!!! */
+/*     } */
   }
 
 

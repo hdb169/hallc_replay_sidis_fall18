@@ -308,7 +308,7 @@ void THcShowerCalib::Init() {
 
   gROOT->Reset();
 
-  char* fname = Form("ROOTfiles/%s.root",fPrefix.c_str());
+  char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/cal_fall18/%s.root",fPrefix.c_str());
   cout << "THcShowerCalib::Init: Root file name = " << fname << endl;
 
   TFile *f = new TFile(fname);
@@ -431,6 +431,7 @@ void THcShowerCalib::CalcThresholds() {
   TF1 *fit = hEunc->GetFunction("gaus");
   Double_t gmean  = fit->GetParameter(1);
   Double_t gsigma = fit->GetParameter(2);
+ 
   fLoThr = gmean - 3.*gsigma;
   fHiThr = gmean + 3.*gsigma;
   cout << "CalcThreshods: fLoThr=" << fLoThr << "  fHiThr=" << fHiThr 

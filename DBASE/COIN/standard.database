@@ -21,8 +21,282 @@ g_ctp_parm_filename       = "DBASE/COIN/general_fall18.param"
 g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+#####################################the following params are added on sep 22, 2019 ##################
 
 
+#Testing 6545 after calib
+6545
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_14deg_3p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+#testing 1-1 after calibration
+
+6068-6071
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_11deg_4p2.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#####Group 11-1, 11-2  
+6419-6426
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_3p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#####Group 11-3, 11 -4  
+6427-6433
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_3p1.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#11-5, 11-6
+6434-6440
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_2p6.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#11-7, 11-8 
+6441-6448
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_2p6.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+#####Group 12-1, 12-2  
+6451-6455
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_3p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+#####Group 12-3, 12-4  
+6459-6464
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_3p1.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#####Group  12-4  
+6456
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_3p1.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+#####Group 12-5, 12-6  
+6465-6470
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_2p6.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+#####Group 12-7, 12-8  
+6473-6479
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_2p1.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+#####Group 14-10, 14-11, 14-12  pip
+6334-6347
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_18deg_1p8.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+
+#####Group 14-7, 14-8, 14-9  pip
+6325-6332
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_18deg_2p3.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+
+#####Group 14-4, 14-5, 14-6  pip
+6315-6323
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_18deg_2p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+#####Group 14-1, 14-2, 14-3  pip
+6309-6314
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_18deg_3p2.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+#####Group 13-10, 13-11, 13-12  pim
+6348-6358
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_18deg_1p8.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+
+#####Group 13-7, 13-8, 13-9  pim
+6300-6308
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_18deg_2p3.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+
+#####Group 13-4, 13-5, 13-6  pim
+6292-6299
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_18deg_2p7.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+#####Group 13-1, 13-2, 13-3  pim
+6285-6291
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_18deg_3p2.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+#####Group 15-7
+6407-6417
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_20deg_1p6.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+#####Group 15-5, 15-6 pip
+6399-6406
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_20deg_2p1.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+#####Group 15-3, 15-4 pip
+6390-6396
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_20deg_2p5.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#####Group 15-1, 15-2 pip
+6397-6398
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_20deg_2p9.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#####Group 15-1, 15-2 pim
+6385-6389
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_20deg_2p9.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#####Group 16-7, 16-8 pim
+6378-6383
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_20deg_1p6.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#####Group 16-5, 16-6 pim
+6373-6377
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_20deg_2p1.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+#####Group 16-3, 16-4 pim
+6367-6372
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_20deg_2p5.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#####Group 16-1, 16-2 pim
+6359-6365
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_20deg_2p9.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+#####Group 17  all####
+6521-6526
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_14deg_4p1.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+#####Group 18  all####
+6527-6536
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_14deg_3p5.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+#####################################the above params are added on sep 22, 2019##################
 #shms electron singles
 6482-6485
 g_ctp_parm_filename       = "DBASE/COIN/general_fall18_singles.param"
@@ -30,7 +304,7 @@ g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
 
-
+###############################jpsi###############################################################
 # jpsi experiment
 # phase 1 kinematics
 7000-7273
