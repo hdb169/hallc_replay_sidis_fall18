@@ -545,7 +545,7 @@ g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
 
 
 #####Group 17  all#### pim/pip
-6521-6526
+6518-6526
 g_ctp_parm_filename       = "DBASE/COIN/general_fall18_14deg_4p1.param"
 g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"

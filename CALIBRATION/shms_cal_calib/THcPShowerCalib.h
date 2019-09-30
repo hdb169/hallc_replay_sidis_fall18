@@ -340,7 +340,7 @@ void THcPShowerCalib::Init() {
 
   gROOT->Reset();
 
-  char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/cal_fall18/%s.root",fPrefix.c_str());
+  char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/pcal_calib_sep26/%s.root",fPrefix.c_str());
   cout << "THcPShowerCalib::Init: Root file name = " << fname << endl;
 
   TFile *f = new TFile(fname);
