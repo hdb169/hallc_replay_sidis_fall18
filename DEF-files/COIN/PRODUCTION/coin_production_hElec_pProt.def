@@ -1,4 +1,30 @@
 
+block H.kin.primary.Q2
+block H.kin.primary.W
+block H.kin.primary.W2
+block H.kin.primary.nu
+block H.kin.primary.omega
+block H.kin.primary.ph_q
+block H.kin.primary.th_q
+block H.kin.primary.x_bj
+block H.kin.primary.scat_angle_deg
+block H.kin.primary.scat_angle_rad
+block P.kin.primary.th_q
+block P.kin.secondary.Erecoil
+block P.kin.secondary.Mrecoil
+block P.kin.secondary.emiss
+block P.kin.secondary.emiss_nuc
+block P.kin.secondary.pmiss
+block P.kin.secondary.xangle
+
+
+
+
+
+
+
+
+
 block CTime.ePiCoinTime_ROC2
 
 block P.cal.pr.goodPosAdcPulseInt
