@@ -1,3 +1,5 @@
+
+  
 #ifndef ROOT_THcPShowerCalib
 #define ROOT_THcPShowerCalib
 
@@ -119,8 +121,6 @@ class THcPShowerCalib {
 
   Double_t        P_hgcer_npe[4];
   Double_t        P_ngcer_npe[4];
-  Double_t        P_ngcer_npeSum;
-  Double_t        P_hgcer_npeSum;
   Double_t        P_tr_beta;
 
   Double_t        P_cal_nclust;          //Preshower
@@ -143,8 +143,6 @@ class THcPShowerCalib {
   TBranch* b_P_tr_tg_y;
   TBranch* b_P_hgcer_npe;
   TBranch* b_P_ngcer_npe;
-  TBranch* b_P_hgcer_npeSum;
-  TBranch* b_P_ngcer_npeSum;
   TBranch* b_P_tr_beta;
 
   TBranch* b_P_cal_nclust;
@@ -223,7 +221,7 @@ void THcPShowerCalib::ReadThresholds() {
   fBetaMin = 0.;
   fBetaMax = 0.;
   fHGCerMin = 999.;
-  fNGCerMin = 999.;
+  //  fNGCerMin = 999.;//--------------------------------------------->sep 21
   fMinHitCount = 999999;
 
   for (UInt_t ipmt=0; ipmt<THcPShTrack::fNpmts; ipmt++) {
@@ -241,8 +239,8 @@ void THcPShowerCalib::ReadThresholds() {
   iss >> fBetaMin >> fBetaMax;
   getline(fin, line);  iss.str(line);
   iss >> fHGCerMin;
-  getline(fin, line);  iss.str(line);
-  iss >> fNGCerMin;
+  // getline(fin, line);  iss.str(line); //--------------------------------------------->sep 21
+  // iss >> fNGCerMin; //--------------------------------------------->sep 21
   getline(fin, line);  iss.str(line);
   iss >> fMinHitCount;
   getline(fin, line);  iss.str(line);
@@ -342,7 +340,7 @@ void THcPShowerCalib::Init() {
 
   gROOT->Reset();
 
-  char* fname = Form("ROOTfiles/%s.root",fPrefix.c_str());
+  char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/pcal_calib_sep26/%s.root",fPrefix.c_str());
   cout << "THcPShowerCalib::Init: Root file name = " << fname << endl;
 
   TFile *f = new TFile(fname);
@@ -364,22 +362,22 @@ void THcPShowerCalib::Init() {
   fTree->SetBranchAddress("P.cal.fly.goodAdcPulseInt",  P_sh_a_p,
 			  &b_P_sh_a_p);
 
-  fTree->SetBranchAddress("P.dc.ntrack", &P_tr_n,&b_P_tr_n);
-  fTree->SetBranchAddress("P.dc.x_fp", &P_tr_x,&b_P_tr_x);
-  fTree->SetBranchAddress("P.dc.y_fp", &P_tr_y,&b_P_tr_y);
-  fTree->SetBranchAddress("P.dc.xp_fp",&P_tr_xp,&b_P_tr_xp);
-  fTree->SetBranchAddress("P.dc.yp_fp",&P_tr_yp,&b_P_tr_yp);
-  fTree->SetBranchAddress("P.gtr.p", &P_tr_p,&b_P_tr_p);
+  fTree->SetBranchAddress("P.tr.n", &P_tr_n,&b_P_tr_n);
+  fTree->SetBranchAddress("P.tr.x", &P_tr_x,&b_P_tr_x);
+  fTree->SetBranchAddress("P.tr.y", &P_tr_y,&b_P_tr_y);
+  fTree->SetBranchAddress("P.tr.th",&P_tr_xp,&b_P_tr_xp);
+  fTree->SetBranchAddress("P.tr.ph",&P_tr_yp,&b_P_tr_yp);
+  fTree->SetBranchAddress("P.tr.p", &P_tr_p,&b_P_tr_p);
 
-  fTree->SetBranchAddress("P.gtr.dp", &P_tr_tg_dp,&b_P_tr_tg_dp);
-  fTree->SetBranchAddress("P.gtr.ph", &P_tr_tg_ph,&b_P_tr_tg_ph);
-  fTree->SetBranchAddress("P.gtr.th", &P_tr_tg_th,&b_P_tr_tg_th);
-  fTree->SetBranchAddress("P.gtr.y",  &P_tr_tg_y, &b_P_tr_tg_y);
+  fTree->SetBranchAddress("P.tr.tg_dp", &P_tr_tg_dp,&b_P_tr_tg_dp);
+  fTree->SetBranchAddress("P.tr.tg_ph", &P_tr_tg_ph,&b_P_tr_tg_ph);
+  fTree->SetBranchAddress("P.tr.tg_th", &P_tr_tg_th,&b_P_tr_tg_th);
+  fTree->SetBranchAddress("P.tr.tg_y",  &P_tr_tg_y, &b_P_tr_tg_y);
  
-  fTree->SetBranchAddress("P.hgcer.npeSum", &P_hgcer_npeSum,&b_P_hgcer_npeSum);
-  fTree->SetBranchAddress("P.ngcer.npeSum", &P_ngcer_npeSum,&b_P_ngcer_npeSum);
+  fTree->SetBranchAddress("P.hgcer.npe", P_hgcer_npe,&b_P_hgcer_npe);
+  // fTree->SetBranchAddress("P.ngcer.npe", P_ngcer_npe,&b_P_ngcer_npe);//--------------------------------------------->sep 21
 
-  fTree->SetBranchAddress("P.hod.beta", &P_tr_beta,&b_P_tr_beta);
+  fTree->SetBranchAddress("P.tr.beta", &P_tr_beta,&b_P_tr_beta);
 
   fTree->SetBranchAddress("P.cal.nclust", &P_cal_nclust,&b_P_cal_nclust);
   fTree->SetBranchAddress("P.cal.ntracks", &P_cal_ntracks,&b_P_cal_ntracks);
@@ -482,6 +480,8 @@ void THcPShowerCalib::CalcThresholds() {
   Double_t gsigma = fit->GetParameter(2);
   fLoThr = gmean - 3.*gsigma;
   fHiThr = gmean + 3.*gsigma;
+  // fLoThr = gmean - 2.*gsigma;
+  //fHiThr = gmean + 2.*gsigma;
   cout << "CalcThreshods: fLoThr=" << fLoThr << "  fHiThr=" << fHiThr 
        << "  nev=" << nev << endl;
 
@@ -541,11 +541,17 @@ bool THcPShowerCalib::ReadShRawTrack(THcPShTrack &trk, UInt_t ientry) {
   ////
   good_trk = P_tr_xp > -0.045+0.0025*P_tr_x;
   if (!good_trk) return 0;
+     //commented Sept 21
+    /* bool good_ngcer = P_ngcer_npe[0] > fNGCerMin || */
+    /* 		    P_ngcer_npe[1] > fNGCerMin || */
+    /* 		    P_ngcer_npe[2] > fNGCerMin || */
+    /* 		    P_ngcer_npe[3] > fNGCerMin  ; */
+    /* if(!good_ngcer) return 0; */
 
-    bool good_ngcer = P_ngcer_npeSum >= fNGCerMin ;
-    if(!good_ngcer) return 0;
-
-  bool good_hgcer = P_hgcer_npeSum >= fHGCerMin  ;
+  bool good_hgcer = P_hgcer_npe[0] +
+  		    P_hgcer_npe[1] +
+  		    P_hgcer_npe[2] +
+  		    P_hgcer_npe[3] > fHGCerMin  ;
   if(!good_hgcer) return 0;
 
   bool good_beta = P_tr_beta > fBetaMin &&
@@ -863,9 +869,15 @@ void THcPShowerCalib::SolveAlphas() {
   // Assign the gain arrays.
 
   for (UInt_t i=0; i<THcPShTrack::fNpmts; i++) {
-    falphaU[i] = au[i];
-    falphaC[i] = ac[i];
+    if (fHitCount[i] >= fMinHitCount) {
+      falphaU[i] = au[i];
+      falphaC[i] = ac[i];
+    }
+   /*  else { */
+/* falphaC[i] = Previous Calibration!!! */
+/*     } */
   }
+
 
 }
 
