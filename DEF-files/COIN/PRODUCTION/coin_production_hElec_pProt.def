@@ -1,3 +1,7 @@
+
+
+
+
 block H.kin.primary.Q2
 block H.kin.primary.W
 block H.kin.primary.W2
@@ -8,7 +12,7 @@ block H.kin.primary.th_q
 block H.kin.primary.x_bj
 block H.kin.primary.scat_ang_deg
 block H.kin.primary.scat_ang_rad
-block H.kin.primary.th_q
+block P.kin.primary.th_q
 block P.kin.secondary.Erecoil
 block P.kin.secondary.Mrecoil
 block P.kin.secondary.emiss
@@ -16,9 +20,20 @@ block P.kin.secondary.emiss_nuc
 block P.kin.secondary.pmiss
 block P.kin.secondary.xangle
 
-block H.kin.*
+block P.dc.x_fp
+block P.dc.y_fp
+block P.dc.xp_fp
+block P.dc.yp_fp
 block P.dc.InsideDipoleExit
+
+block H.dc.x_fp
+block H.dc.y_fp
+block H.dc.xp_fp
+block H.dc.yp_fp
 block H.dc.InsideDipoleExit
+
+
+
 
 
 
@@ -59,7 +74,8 @@ block P.gtr.dp
 block P.cal.etot
 block P.hgcer.npe
 
-
+block P.gtr.x
+block P.gtr.y
 
 block H.cal.1pr.goodNegAdcPulseInt
 block H.cal.1pr.goodPosAdcPulseInt
@@ -94,6 +110,12 @@ block H.cal.eprtracknorm
 block P.gtr.p
 block H.gtr.p
 
+block P.gtr.ph
+block P.gtr.th
+
+block H.gtr.ph
+block H.gtr.th
+
 
 
 block P.cal.etottracknorm
@@ -119,3 +141,80 @@ block H.hod.goodscinhit
 block P.hod.betanotrack
 block P.dc.ntrack
 block P.hod.goodscinhit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+block P.dc.1u1.nhit
+block P.dc.1u2.nhit
+block P.dc.1x1.nhit
+block P.dc.1x2.nhit
+block P.dc.1v1.nhit
+block P.dc.1v2.nhit
+block P.dc.2v1.nhit
+block P.dc.2v2.nhit
+block P.dc.2x2.nhit
+block P.dc.2x1.nhit
+block P.dc.2u2.nhit
+block P.dc.2u1.nhit
+
+block P.dc.1u1.time
+block P.dc.1u2.time
+block P.dc.1x1.time
+block P.dc.1x2.time
+block P.dc.1v1.time
+block P.dc.1v2.time
+block P.dc.2v1.time
+block P.dc.2v2.time
+block P.dc.2x2.time
+block P.dc.2x1.time
+block P.dc.2u2.time
+block P.dc.2u1.time
+
+block P.dc.residualExclPlane
+block P.dc.residual
+
+block P.dc.ntrack
+block H.dc.ntrack
+
+
+block H.gtr.dp
+
+block H.dc.1u1.nhit
+block H.dc.1u2.nhit
+block H.dc.1x1.nhit
+block H.dc.1x2.nhit
+block H.dc.1v1.nhit
+block H.dc.1v2.nhit
+block H.dc.2v1.nhit
+block H.dc.2v2.nhit
+block H.dc.2x2.nhit
+block H.dc.2x1.nhit
+block H.dc.2u2.nhit
+block H.dc.2u1.nhit
+
+block H.dc.1u1.time
+block H.dc.1u2.time
+block H.dc.1x1.time
+block H.dc.1x2.time
+block H.dc.1v1.time
+block H.dc.1v2.time
+block H.dc.2v1.time
+block H.dc.2v2.time
+block H.dc.2x2.time
+block H.dc.2x1.time
+block H.dc.2u2.time
+block H.dc.2u1.time
+
+block H.dc.residualExclPlane
+block H.dc.residual

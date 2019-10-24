@@ -560,6 +560,24 @@ g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
 
 
+################test only################oct 5  ##########
+##########################################################0ct  5##############05
+#####Group 1-4, 1-5  pim
+6073-6083
+;g_ctp_parm_filename       = "DBASE/COIN/general_fall18_11deg_3p6.param"
+g_ctp_parm_filename       = "DBASE/COIN/6073_shms_cal_test.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+6537-6552
+;g_ctp_parm_filename       = "DBASE/COIN/general_fall18_11deg_3p6.param"
+g_ctp_parm_filename       = "DBASE/COIN/6545_shms_cal_test.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
 
 #####################################the above params are added on sep 22, 2019##################
 #shms electron singles
