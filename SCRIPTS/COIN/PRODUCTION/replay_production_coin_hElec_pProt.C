@@ -24,8 +24,9 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   pathList.push_back("./cache");
 
   //const char* RunFileNamePattern = "raw/coin_all_%05d.dat";
-  const char* ROOTFileNamePattern = "ROOTfiles/cal_calib_oct22/coin_replay_production_%d_%d.root";
-  
+  // const char* ROOTFileNamePattern = "ROOTfiles/cal_calib_oct22/coin_replay_production_%d_%d.root";
+    const char* ROOTFileNamePattern = "ROOTfiles/spring_hgc25/coin_replay_production_%d_%d.root";
+
   // Load global parameters
   gHcParms->Define("gen_run_number", "Run Number", RunNumber);
   gHcParms->AddString("g_ctp_database_filename", "DBASE/COIN/standard.database");

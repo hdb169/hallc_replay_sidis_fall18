@@ -76,11 +76,12 @@ cminch=2.54
 #include "PARAM/SHMS/HODO/phodo_Vpcalib_spring19.param"
 #include "PARAM/SHMS/HGCER/phgcer_calib.param"
 #include "PARAM/SHMS/AERO/paero_calib.param"
-#include "PARAM/SHMS/CAL/pcal_calib_13deg_3p5.param"
+;#include "PARAM/SHMS/CAL/pcal_calib_13deg_3p5.param"
+
+#include "PARAM/SHMS/CAL/7671_7672_hgc25_pcal0p0000000001.param"
 
 
-
-
+;#include "PARAM/SHMS/CAL/test_oct24_7671_hgc5_cal0p9.param"
 
 
 
