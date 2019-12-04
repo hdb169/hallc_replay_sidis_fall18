@@ -40,8 +40,9 @@ cminch=2.54
 #include "PARAM/HMS/HODO/hhodo_TWcalib_fall18.param"
 #include "PARAM/HMS/HODO/hhodo_Vpcalib_fall18.param"
 #include "PARAM/HMS/AERO/haero_calib.param"
-#include "PARAM/HMS/CAL/hcal_set_13_7.param"
-;#include "PARAM/HMS/CAL/hcal_calib_18deg_2p7.param"
+#include "PARAM/HMS/CAL/6292_hms_final.param"
+
+
 
 ; General SHMS parameter files
 ; Note: shmsflags.param includes spectrometer offsets and options.
@@ -76,10 +77,17 @@ cminch=2.54
 #include "PARAM/SHMS/HODO/phodo_Vpcalib_fall18.param"
 #include "PARAM/SHMS/HGCER/phgcer_calib.param"
 #include "PARAM/SHMS/AERO/paero_calib.param"
-#include "PARAM/SHMS/CAL/pcal_calib_18deg_2p7.param"
+#include "PARAM/SHMS/CAL/6292_shms_final.param"
 
+
+
+
+
+;#include "PARAM/SHMS/CAL/pcal_calib_18deg_2p7.param"
 ;#include "PARAM/SHMS/CAL/pcal_calib_6088.param"
 ;#include "PARAM/SHMS/CAL/pcal_calib_defocused.param"
 ;#include "PARAM/SHMS/CAL/pcal_calib_6088_added.param"
 ;#include "PARAM/SHMS/CAL/pcal_calib_hamlet.param";for low momentum runs
+;#include "PARAM/HMS/CAL/hcal_set_13_7.param"
+;#include "PARAM/HMS/CAL/hcal_calib_18deg_2p7.param"
 

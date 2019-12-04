@@ -25,7 +25,8 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
 
   //const char* RunFileNamePattern = "raw/coin_all_%05d.dat";
   // const char* ROOTFileNamePattern = "ROOTfiles/cal_calib_oct22/coin_replay_production_%d_%d.root";
-    const char* ROOTFileNamePattern = "ROOTfiles/spring_hgc25/coin_replay_production_%d_%d.root";
+  // const char* ROOTFileNamePattern = "ROOTfiles/calibrated_dec2_track_purne/coin_replay_production_%d_%d.root";
+    const char* ROOTFileNamePattern = "ROOTfiles/dec2_purne/coin_replay_production_%d_%d.root";
 
   // Load global parameters
   gHcParms->Define("gen_run_number", "Run Number", RunNumber);
@@ -245,7 +246,7 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   // Define output ROOT file
   analyzer->SetOutFile(ROOTFileName.Data());
   // Define DEF-file+
-  analyzer->SetOdefFile("DEF-files/COIN/PRODUCTION/coin_production_hElec_pProt.def");
+   analyzer->SetOdefFile("DEF-files/COIN/PRODUCTION/coin_production_hElec_pProt.def");
   // Define cuts file
   analyzer->SetCutFile("DEF-files/COIN/PRODUCTION/CUTS/coin_production_cuts.def");  // optional
   // File to record accounting information for cuts

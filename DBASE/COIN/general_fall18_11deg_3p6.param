@@ -40,7 +40,11 @@ cminch=2.54
 #include "PARAM/HMS/HODO/hhodo_TWcalib_fall18.param"
 #include "PARAM/HMS/HODO/hhodo_Vpcalib_fall18.param"
 #include "PARAM/HMS/AERO/haero_calib.param"
-#include "PARAM/HMS/CAL/hcal_set_1_4.param"
+#include "PARAM/HMS/CAL/6073_hms_final.param"
+
+
+
+;#include "PARAM/HMS/CAL/hcal_set_1_4.param"
 ;#include "PARAM/HMS/CAL/hcal_calib_11deg_3p6.param"
 
 ; General SHMS parameter files
@@ -76,8 +80,12 @@ cminch=2.54
 #include "PARAM/SHMS/HODO/phodo_Vpcalib_fall18.param"
 #include "PARAM/SHMS/HGCER/phgcer_calib.param"
 #include "PARAM/SHMS/AERO/paero_calib.param"
-#include "PARAM/SHMS/CAL/pcal_calib_11deg_3p6.param"
+#include "PARAM/SHMS/CAL/6073_shms_final.param"
 
+
+
+;#include "PARAM/SHMS/CAL/6073_final.param"
+;#include "PARAM/SHMS/CAL/pcal_calib_11deg_3p6.param"
 ;#include "PARAM/SHMS/CAL/pcal_calib_6088.param"
 ;#include "PARAM/SHMS/CAL/pcal_calib_defocused.param"
 ;#include "PARAM/SHMS/CAL/pcal_calib_6088_added.param"
