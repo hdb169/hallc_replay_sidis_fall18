@@ -40,7 +40,8 @@ cminch=2.54
 #include "PARAM/HMS/HODO/hhodo_TWcalib_spring19.param"
 #include "PARAM/HMS/HODO/hhodo_Vpcalib_spring19.param"
 #include "PARAM/HMS/AERO/haero_calib.param"
-#include "PARAM/HMS/CAL/hcal_calib_17deg_2p7.param"
+#include "PARAM/HMS/CAL/7737_hms_final.param"
+
 
 ; General SHMS parameter files
 ; Note: shmsflags.param includes spectrometer offsets and options.
@@ -75,11 +76,5 @@ cminch=2.54
 #include "PARAM/SHMS/HODO/phodo_Vpcalib_spring19.param"
 #include "PARAM/SHMS/HGCER/phgcer_calib.param"
 #include "PARAM/SHMS/AERO/paero_calib.param"
-#include "PARAM/SHMS/CAL/pcal_calib_17deg_2p7.param"
-
-
-
-
-
-
+#include "PARAM/SHMS/CAL/7737_shms_final.param"
 
