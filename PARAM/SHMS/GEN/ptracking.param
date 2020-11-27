@@ -1,13 +1,25 @@
+;PARAM/SHMS/GEN/ptracking.param
+;2019 Sept 12 , Mark Jones Changes to this file
+;1)we already selected 25 hits per dc plane, so no need to cut down to < 21 hits,so dont apply nhit cut anymore.
+;2)The pruning algorithm is applied by puting  psel_using_prune = 1 in line num 49.
+;whatever we had earlier is alos included in the git as ptracking.param_beforesep12_2019
+;CHANGES ARE: ORIGINAL_VS_MARK'S_CHANGES
+;1) psel_using_prune = 0 vs  psel_using_prune = 1, around line num = 61
+
+;=================================sept 20 2019=============================================================
+
 ; shms pattern recognition and tracking code parameters
 ; pmax_pr_hits is the maximum number of decoded hits allowed in a chamber for
 ;              pattern recognition to proceed. This protexts against unusual
 ;              kami kaze events which hang the analyzer to a long time.
 
 ; Tracking parameters
-  pmax_pr_hits = 25, 25
+  pmax_pr_hits = 25, 25 
 
 ; pminhit(i)   minimum number of hits in each space point (one for each chamber)
 pmin_hit = 5,5
+
+
 ; hmin_combos(i) minimum number of pairs in each space point ( one per chamber)
 ; should be 3/3 for 4/6 tracking, and 4/4 for 5/6 tracking (JRA)
 pmin_combos = 4,4
@@ -23,8 +35,7 @@ pntracks_max_fp = 10
 
 ; The following four criteria are applied to the stub fit results at the
 ; focal plane position to link stubs to tracks
-  pntracks_max_fp = 10
-  pxt_track_criterion = 100.0
+  pxt_track_criterion = 20.0; default = 100--------------->June2
   pyt_track_criterion = 20.0
   pxpt_track_criterion = 1.0
   pypt_track_criterion = 1.0
@@ -34,7 +45,7 @@ pntracks_max_fp = 10
 
 ; No small angle approximation for cosmic ray tests
   pSmallAngleApprox = 1
-;
+
 ; when selecting stub for chamber 
 ;  be sure stub_xp - stub_x*fRatio_xpfp_to_xfp < pstub_max_xpdiff
 ;   fRatio_xpfp_to_xfp is set in THcDriftChamber::ReadDatabase according to the spectrometer
@@ -46,13 +57,23 @@ pstub_max_xpdiff=.2
 ; psel_using_scin         uses scintillator for track selection
   psel_using_scin = 0
 ; psel_using_prune         using prune
+;  psel_using_prune = 1
   psel_using_prune = 1
+
+; parameters used in selecting tracks for Hodoscope efficiency in THcHodoEff.cxx
+;   HodoEff_CalEnergy_Cut  cut on the track energy (GeV)
+;   pstat_maxchisq          chisquared limit for tracks used to measure hodo. eff.
+;   pstat_slop  (cm)       track distance from center of scin. to count as expecting hit
+  pstat_maxchisq = 10.
+  pHodoEff_CalEnergy_Cut = 0.050
+  pstat_slop = 2.
 ; xptar prune
 pprune_xp = .1
 ; yptar prune 
 pprune_yp = .1
 ; ytar prune 
-pprune_ytar = 6
+;pprune_ytar = 6//------------------------------------->June30
+pprune_yar = 4
 ; delta prune 
 pprune_delta = 30
 ; beta track = beta mom diff 
@@ -68,17 +89,6 @@ pprune_fptime = 1000.
 ; Prune selects on if hit Y2 plane
 ; Prune selects on if hit X2 plane
 ; Prune selects on chi2
-;
-; new exit dipole pruning flag
-hprune_DipoleExit=1
-
-; parameters used in selecting tracks for Hodoscope efficiency in THcHodoEff.cxx
-;   HodoEff_CalEnergy_Cut  cut on the track energy (GeV)
-;   pstat_maxchisq          chisquared limit for tracks used to measure hodo. eff.
-;   pstat_slop  (cm)       track distance from center of scin. to count as expecting hit
-  pstat_maxchisq = 10.
-  pHodoEff_CalEnergy_Cut = 0.050
-  pstat_slop = 2.
 
 
 ; pstat_mineff            warning level for scin. effic.
@@ -99,12 +109,19 @@ hprune_DipoleExit=1
 ; pdc_min_plane_eff        warning level for plane effic, measured using tracking
   pdc_min_plane_eff = .95,.95,.95,.95,.95,.95
                       .95,.95,.95,.95,.95,.95
-;Derek added this for scintillator based fiducial cuts.  Everything from
-;loscin to hiscin inclusive will be included as "good" scintillator hits.
-  pxloscin  = 3,3
-  pxhiscin  = 11, 12
-  pyloscin  = 4, 5
-  pyhiscin  = 10, 17;
+; Cut on scintillator paddles to select regions for tracking efficiency
+; 1x pad1 center pos = -45. padN pos = -45. + (N-1)*7.5 pad3=-30.  pad11=+30.
+; 2x  pad1 center pos = -61.75 padN pos = -61.75 + (N-1)*9.5 pad3=-42.75 pad11=+42.75
+  pxloscin  = 4, 4 ;  ---------------default 3,3
+  pxhiscin  = 11, 10;  -------------default 11, 12
+; 1y pad1 center pos = +45. padN pos = +45. + (N-1)*7.5 pad4=+22.5  pad10=-22.5
+; 2y  pad1 center pos = +50 padN pos = +50 +  (N-1)*5   pad5=+30.0  pad17=-30.0
+  pyloscin  = 4, 6; ----------------default 4, 5
+  pyhiscin  = 11, 16; -------------default = 10, 17
+
 ;  ptrack_eff_test_scin_planes is the number of planes nec needed to
 ;  set sweet spot to true. 4 is extra clean, 3 is good enough for e-'s.
   ptrack_eff_test_num_scin_planes = 4
+
+;added June 30, 2020
+

@@ -1,0 +1,13 @@
+num_scal_reads = 1
+
+scal_read_bcm1_current = 1774.41
+
+scal_read_bcm2_current = 1776.69
+
+scal_read_bcm4a_current = 34795.1
+
+scal_read_bcm4b_current = 34798
+
+scal_read_bcm4c_current = 35195.1
+
+scal_read_event = 1e+38

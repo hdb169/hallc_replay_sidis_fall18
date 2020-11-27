@@ -1,0 +1,23 @@
+;My version after plotting REF times Hune 29
+pdc_tdcrefcut=-14500
+phodo_tdcrefcut=-3900
+
+phodo_adcrefcut=-4000
+pngcer_adcrefcut=-4000
+phgcer_adcrefcut=-4000
+paero_adcrefcut=-4000
+pcal_adcrefcut=-4000
+
+;Marks Vesrion
+
+pdc_tdcrefcut=-13900
+phodo_tdcrefcut=-3900
+
+phodo_adcrefcut=-5280
+pngcer_adcrefcut=-5280
+phgcer_adcrefcut=-5280
+paero_adcrefcut=-5280
+pcal_adcrefcut=-5280
+
+
+

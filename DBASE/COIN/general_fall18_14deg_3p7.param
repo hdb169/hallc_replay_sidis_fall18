@@ -8,7 +8,7 @@ cminch=2.54
 #include "PARAM/GEN/gdebug.param"
 #include "PARAM/GEN/gtarget.param"
 #include "PARAM/GEN/gbeam.param"
-#include "PARAM/GEN/gscalers.param"
+#include "PARAM/GEN/gscalers_fall18.param"
 
 ; General HMS parameter files
 ; Note: hmsflags.param includes spectrometer offsets and options.
@@ -77,6 +77,11 @@ cminch=2.54
 #include "PARAM/SHMS/HGCER/phgcer_calib.param"
 #include "PARAM/SHMS/AERO/paero_calib.param"
 #include "PARAM/SHMS/CAL/6545_shms_final.param"
+;#include "/u/group/c-csv/hdbhatt/sep15/hallc_replay_sidis_fall18/CALIBRATION/shms_cal_calib_best_fall/6545_hgc5_aero2_cal9/cal9_aero2_hgc5.param"
+
+
+
+
 
 ;#include "PARAM/SHMS/CAL/pcal_calib_14deg_3p7.param"
 ;#include "PARAM/SHMS/CAL/pcal_calib_6088.param"

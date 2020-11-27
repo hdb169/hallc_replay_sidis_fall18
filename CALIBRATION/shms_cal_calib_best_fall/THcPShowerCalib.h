@@ -249,7 +249,7 @@ void THcPShowerCalib::ReadThresholds() {
   iss >> fHGCerMin;
   getline(fin, line);  iss.str(line);//--------------------------------------------------------nov26
   iss >> faeroMin;
-  getline(fin, line);  iss.str(line);//--------------------------------------------------------oct4
+  getline(fin, line);  iss.str(line);//--------------------------------------------------------nov26
   iss >> fcalMin;
   getline(fin, line);  iss.str(line);
   iss >> fMinHitCount;
@@ -263,7 +263,9 @@ void THcPShowerCalib::ReadThresholds() {
   getline(fin, line);
   getline(fin, line);
   getline(fin, line);
- 
+  //this line goes after aerogel
+  //  getline(fin, line);  iss.str(line);//--------------------------------------------------------oct4
+  // iss >> fcalMin;
   unsigned iblk = 0;
 
   //Preshower
@@ -313,7 +315,7 @@ void THcPShowerCalib::ReadThresholds() {
   cout << "  Delta min, max   = " << fDeltaMin << "  " << fDeltaMax << endl;
   cout << "  Beta min, max    = " << fBetaMin << "  " << fBetaMax << endl;
   cout << "  Heavy Gas Cerenkov min = " << fHGCerMin << endl;
-  cout << "  P.aero.npeSum min = " << faeroMin << endl;//----------------------oct 4
+  cout << "  P.aero.npeSum min = " << faeroMin << endl;
   cout << "  P.cal.etottracknorm min = " << fcalMin << endl;//----------------------oct 4
   cout << "  Min. hit count   = " << fMinHitCount << endl;
   cout << "  Uncalibrated histo. range and binning: " << fEuncLoLo << "  "
@@ -321,6 +323,7 @@ void THcPShowerCalib::ReadThresholds() {
   cout << "  Uncalibrated histo. fit range: " << fEuncGFitLo << "  "
        << fEuncGFitHi << endl;
   cout << endl;
+  // cout << "  P.cal.etottracknorm min = " << fcalMin << endl;//----------------------oct 4
 
   cout << "Initial gain constants:\n";
 
@@ -350,8 +353,8 @@ void THcPShowerCalib::Init() {
   //Reset ROOT and connect tree file.
 
   gROOT->Reset();
-   char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/calibrated_dec2_track/%s.root",fPrefix.c_str());
-   //char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/fall_old_calib/%s.root",fPrefix.c_str());
+  char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/prune_falld2/%s.root",fPrefix.c_str());
+  //char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/dec2_prune/%s.root",fPrefix.c_str());
   //char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/cal_calib_oct22/%s.root",fPrefix.c_str());
 
   cout << "THcPShowerCalib::Init: Root file name = " << fname << endl;
@@ -556,7 +559,7 @@ bool THcPShowerCalib::ReadShRawTrack(THcPShTrack &trk, UInt_t ientry) {
   if (!good_trk) return 0;
 
   bool good_cal = P_cal_etottracknorm >= fcalMin ; //-----------------------------------------------------------------oct 04, 19
-  if(!good_cal) return 0;//--------------------------------------------------------------------------------oct4
+ if(!good_cal) return 0;//--------------------------------------------------------------------------------oct4
  
   bool good_hgcer = P_hgcer_npeSum >= fHGCerMin  ;
   if(!good_hgcer) return 0;

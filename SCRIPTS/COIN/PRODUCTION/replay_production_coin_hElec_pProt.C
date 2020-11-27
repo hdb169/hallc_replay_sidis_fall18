@@ -24,9 +24,14 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   pathList.push_back("./cache");
 
   //const char* RunFileNamePattern = "raw/coin_all_%05d.dat";
-  // const char* ROOTFileNamePattern = "ROOTfiles/cal_calib_oct22/coin_replay_production_%d_%d.root";
+//   const char* ROOTFileNamePattern = "ROOTfiles/test-april2020-branch/coin_replay_production_%d_%d.root";
+//     const char* ROOTFileNamePattern = "ROOTfiles/lumi_prune_datasimc/coin_replay_production_%d_%d.root";
+ 
+const char* ROOTFileNamePattern = "ROOTfiles/datasimc/coin_replay_production_%d_%d.root";
+
   // const char* ROOTFileNamePattern = "ROOTfiles/calibrated_dec2_track_purne/coin_replay_production_%d_%d.root";
-    const char* ROOTFileNamePattern = "ROOTfiles/dec2_purne/coin_replay_production_%d_%d.root";
+  //const char* ROOTFileNamePattern = "ROOTfiles/singles_jan2/coin_replay_production_%d_%d.root";//===============================jan6
+  //const char* ROOTFileNamePattern = "ROOTfiles/singles_jan2_10_10_thcdc/coin_replay_production_%d_%d.root";
 
   // Load global parameters
   gHcParms->Define("gen_run_number", "Run Number", RunNumber);
@@ -53,7 +58,7 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   // SHMS 
   //=:=:=:=
 
-  // Set up the equipment to be analyzed.
+  // Setkup the equipment to be analyzed.
   THcHallCSpectrometer* SHMS = new THcHallCSpectrometer("P", "SHMS");
   SHMS->SetEvtType(1);
   SHMS->AddEvtType(4);
@@ -69,7 +74,8 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   SHMS->AddDetector(pdc);
   // Add hodoscope to SHMS apparatus
   THcHodoscope* phod = new THcHodoscope("hod", "Hodoscope");
-  SHMS->AddDetector(phod);
+  SHMS->AddDetector(phod);//=======================================dec16
+  //cout<<" test = "<<  phod->DefineVariables()<<endl;
   // Add Heavy Gas Cherenkov to SHMS apparatus
   THcCherenkov* phgcer = new THcCherenkov("hgcer", "Heavy Gas Cherenkov");
   SHMS->AddDetector(phgcer);
@@ -79,8 +85,28 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   // Add calorimeter to SHMS apparatus
   THcShower* pcal = new THcShower("cal", "Calorimeter");
   SHMS->AddDetector(pcal);
+  //const char* CurrentFileNamePattern = "PARAM/SHMS/BCM/CALIB/bcmcurrent_%d.param";	
+  //gHcParms->Load(Form(CurrentFileNamePattern, RunNumber));
+  //THcBCMCurrent *pbc = new THcBCMCurrent("P.bcm","BCM current check");
+ // gHaPhysics->Add(pbc);		
+  
 
-  // THcBCMCurrent* hbc = new THcBCMCurrent("H.bcm", "BCM current check");
+//----------------------------------------------------------------------------------------------------------->BCM FLAG
+/* const char* CurrentFileNamePattern = "PARAM/SHMS/BCM/CALIB/bcmcurrent_%d.param";
+ gHcParms->Load(Form(CurrentFileNamePattern, RunNumber));
+ THcBCMCurrent *pbc = new THcBCMCurrent("P.bcm","BCM current check");
+ gHaPhysics->Add(pbc);
+
+
+ const char* CurrentFileNamePatternhms = "PARAM/HMS/BCM/CALIB/bcmcurrent_%d.param";
+ gHcParms->Load(Form(CurrentFileNamePatternhms, RunNumber));
+ THcBCMCurrent *hbc = new THcBCMCurrent("H.bcm","BCM current check");
+ gHaPhysics->Add(hbc);
+
+*/
+//-----------------------------------------------------------------------------------------------------------BCM FLAG
+
+// THcBCMCurrent* hbc = new THcBCMCurrent("H.bcm", "BCM current check");
   // gHaPhysics->Add(hbc);
 
   // Add rastered beam apparatus
@@ -217,6 +243,7 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   // A simple event class to be output to the resulting tree.
   // Creating your own descendant of THaEvent is one way of
   // defining and controlling the output.
+  //analyzer->SetMarkInterval(1);//============================================dec13
   THaEvent* event = new THaEvent;
 
   // Define the run(s) that we want to analyze.
@@ -227,7 +254,8 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   run->SetRunParamClass("THcRunParameters");
   
   // Eventually need to learn to skip over, or properly analyze the pedestal events
-  run->SetEventRange(1, MaxEvent); // Physics Event number, does not include scaler or control events.
+  run->SetEventRange(1, MaxEvent); // Physics Event number, does not include scaler or control events.===================================DEC 13
+  //run->SetEventRange(10000, MaxEvent); // Physics Event number, does not include scaler or control events.===========commented for hcal check
   run->SetNscan(1);
   run->SetDataRequired(0x7);
   run->Print();
@@ -250,11 +278,12 @@ void replay_production_coin_hElec_pProt (Int_t RunNumber = 0, Int_t MaxEvent = 0
   // Define cuts file
   analyzer->SetCutFile("DEF-files/COIN/PRODUCTION/CUTS/coin_production_cuts.def");  // optional
   // File to record accounting information for cuts
-  analyzer->SetSummaryFile(Form("REPORT_OUTPUT/COIN/PRODUCTION/summary_production_%d_%d.report", RunNumber, MaxEvent));  // optional
+  analyzer->SetSummaryFile(Form("REPORT_OUTPUT/COIN/PRODUCTION/test-april2020-branch/summary_production_%d_%d.report", RunNumber, MaxEvent));  // optional
   // Start the actual analysis.
   analyzer->Process(run);
   // Create report file from template
   analyzer->PrintReport("TEMPLATES/COIN/PRODUCTION/coin_production.template",
-  			Form("REPORT_OUTPUT/COIN/PRODUCTION/replay_coin_production_%d_%d.report", RunNumber, MaxEvent));  // optional
+  			Form("REPORT_OUTPUT/COIN/PRODUCTION/test-april2020-branch/replay_coin_production_%d_%d.report", RunNumber, MaxEvent));  // optional
+    //tt->SetBranchAddress("P.ngcer.npeSum",&ngcer); 
 
 }

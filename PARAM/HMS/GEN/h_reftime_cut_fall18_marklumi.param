@@ -1,0 +1,17 @@
+;Marks Values
+;hdc_tdcrefcut=-15500
+;hhodo_tdcrefcut=-2900
+;hhodo_adcrefcut=-4800
+;hcer_adcrefcut=-4800
+;hcal_adcrefcut=-4800
+
+
+
+;New July29, 2020, Mark's Lumi Runs
+hdc_tdcrefcut=-15500
+hhodo_tdcrefcut=-2900
+hhodo_adcrefcut=-4000
+hcer_adcrefcut=-4000
+hcal_adcrefcut=-4000
+
+

@@ -17,6 +17,11 @@ SHMS Angle : {ptheta_lab}
 SHMS Run Length   : {P.1MHz.scalerTime:%.3f} sec
 HMS  Run Length   : {H.1MHz.scalerTime:%.3f} sec
 
+
+SHMS Run Length Cut  : {P.1MHz.scalerTimeCut:%.3f} sec
+HMS  Run Length Cut  : {H.1MHz.scalerTimeCut:%.3f} sec
+
+
 ***********
 * Beamline
 ***********
@@ -223,12 +228,12 @@ HMS_pTRIG6 Pre-scaled Pre-triggers :  {(H.pTRIG6.scalerCut/gHC_ti_ps_factors[5])
 = EDTM
 =:=:=:=:
 
-SHMS EDTM Triggers           : {P.EDTM.scalerCut}
+SHMS EDTM Triggers           : {P.EDTM.scaler}
 SHMS Estimated EDTM Triggers : {P.EDTM.scalerCutRate*(P.1MHz.scalerCut/1000000.):%.0f}
 SHMS EDTM Trigger Rate       : {P.EDTM.scalerCutRate/1000.:%.3f} kHz
 SHMS Accepted EDTM Triggers  : {SHMS_edtm_accepted.npassed}
 
-HMS EDTM Triggers            : {H.EDTM.scalerCut}
+HMS EDTM Triggers            : {H.EDTM.scaler}
 HMS Estimated EDTM Triggers  : {H.EDTM.scalerCutRate*(H.1MHz.scalerCut/1000000.):%.0f}
 HMS EDTM Trigger Rate        : {H.EDTM.scalerCutRate/1000.:%.3f} kHz
 HMS Accepted EDTM Triggers   : {HMS_edtm_accepted.npassed}

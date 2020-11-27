@@ -9,3 +9,7 @@ Dec 2 , 2019
 4)Dipole exit was included by peter but not in my version.
 
 5) Lets run this and see what happens.
+
+
+6)July29, There are two versions of ref times for Mark's lumi runs, one I have checked, which is being used p_reftime_cut_fall18_marklumi.param (Mark's version
+p_reftime_cut_fall18_markversion.param)

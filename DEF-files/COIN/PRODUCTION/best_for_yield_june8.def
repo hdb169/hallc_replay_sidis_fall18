@@ -1,0 +1,378 @@
+#block P.*
+#block H.*
+#block T.*
+block P.dc.ntrack
+block P.dc.ntrack
+block P.dc.Ch1.nhit
+block P.dc.Ch1.nhit
+block P.dc.ntrack
+block P.dc.x_fp
+block P.dc.y_fp
+block P.dc.xp_fp
+block P.dc.yp_fp
+block P.dc.InsideDipoleExit
+
+block P.hod.goodscinhit
+block P.hod.betanotrack
+block T.coin.hHODO*
+block T.coin.hRF*
+block T.coin.pHODO*
+block T.coin.pRF*
+block P.hod.fp*
+block H.hod.fp*
+block *fptime*
+
+block P.gtr.x
+block P.gtr.y
+block P.gtr.th
+block P.gtr.ph
+block P.gtr.beta
+block P.gtr.dp
+block P.gtr.p
+
+
+block P.cal.nclust
+block P.cal.ntracks
+block g.evtyp
+
+block CTime.ePiCoinTime_ROC2
+block P.ngcer.npe
+block P.ngcer.npeSum
+
+block P.hod.beta
+block P.hod.goodstarttime
+block P.hgcer.npeSum
+block P.hgcer.npe
+block P.aero.npeSum
+
+
+block P.cal.etottracknorm
+block P.cal.eprtracknorm
+block P.cal.eprtrack
+block P.cal.etot
+block P.cal.etotnorm
+block P.cal.etrack
+block P.cal.etracknorm
+block P.hod.starttime
+
+
+
+block H.cal.etottracknorm
+block H.cal.eprtracknorm
+block H.cal.eprtrack
+block H.cal.etot
+block H.cal.etotnorm
+block H.cal.etrack
+block H.cal.etracknorm
+block H.dc.ntrack
+block H.dc.ntrack
+block H.dc.residualExclPlane
+block H.dc.residual
+
+block H.dc.Ch1.nhit
+block H.dc.Ch1.nhit
+block H.kin.primary.W
+block H.kin.primary.Q2
+block H.kin.primary.x_bj
+block H.kin.primary.omega
+
+
+block H.hod.beta
+block H.hod.goodstarttime
+block H.dc.ntrack
+block H.hod.goodscinhit
+block H.hod.betanotrack
+block H.cer.npe
+block H.cer.npeSum
+block H.dc.x_fp
+block H.dc.y_fp
+block H.dc.xp_fp
+block H.dc.yp_fp
+block H.gtr.x
+block H.gtr.y
+block H.gtr.th
+block H.gtr.ph
+block H.gtr.beta
+block H.gtr.dp
+block H.gtr.p
+
+
+block H.cal.nclust
+block H.dc.InsideDipoleExit
+block H.hod.starttime
+
+
+
+#block P.*
+#block P.*
+#block P.dc.*
+#block H.dc.*
+block P.dc.Ch1.nhit
+block P.dc.Ch1.nhit
+block H.dc.Ch1.nhit
+block H.dc.Ch1.nhit
+#block P.hod.*
+#block H.hod.* 
+#block P.dc.*
+#block H.dc.*
+block H.kin.primary.W
+block H.kin.primary.Q2
+block H.kin.primary.x_bj
+block H.kin.primary.omega
+block P.gtr.p
+block H.gtr.p
+
+#block P.tr.*
+#block H.tr.*
+block P.dc.ntrack
+block P.hod.goodscinhit
+block P.hod.betanotrack
+block H.dc.ntrack
+block H.hod.goodscinhit
+block H.hod.betanotrack
+block H.cer.npe
+#tracking
+block P.dc.x_fp
+block P.dc.y_fp
+block P.dc.xp_fp
+block P.dc.yp_fp
+block P.gtr.x
+block P.gtr.y
+block P.gtr.th
+block P.gtr.ph
+block H.dc.x_fp
+block H.dc.y_fp
+block H.dc.xp_fp
+block H.dc.yp_fp
+block H.gtr.x
+block H.gtr.y
+block H.gtr.th
+block H.gtr.ph
+
+
+#block P.dc.*
+#block H.dc.*
+#block P.cal.*
+
+block g.evtyp
+
+block P.dc.InsideDipoleExit
+block H.dc.InsideDipoleExit
+block CTime.ePiCoinTime_ROC2
+block P.hgcer.npeSum
+block P.ngcer.npe
+
+block P.ngcer.npeSum
+block P.hod.beta
+block P.hod.goodstarttime
+block P.hgcer.npeSum
+block P.aero.npeSum
+block P.cal.etottracknorm
+block P.cal.eprtracknorm
+block P.cal.etotnorm
+block P.gtr.beta
+block P.gtr.dp
+block P.cal.etot
+block P.hgcer.npe
+
+block P.gtr.x
+block P.gtr.y
+block H.cer.npe
+
+block H.cer.npeSum
+block H.hod.beta
+block H.hod.goodstarttime
+block H.cal.etottracknorm
+block H.gtr.beta
+block H.gtr.dp
+block H.cal.etotnorm
+block H.cal.eprtracknorm
+
+block P.cal.etottracknorm
+block P.cal.eprtracknorm
+block P.cal.eprtrack
+block P.cal.etot
+block P.cal.etotnorm
+block P.cal.etrack
+block P.cal.etracknorm
+
+block H.cal.etottracknorm
+block H.cal.eprtracknorm
+block H.cal.eprtrack
+block H.cal.etot
+block H.cal.etotnorm
+block H.cal.etrack
+block H.cal.etracknorm
+block H.hod.betanotrack
+block H.dc.ntrack
+block H.hod.goodscinhit
+block P.hod.betanotrack
+block P.dc.ntrack
+block P.hod.goodscinhit
+block P.dc.ntrack
+block H.dc.ntrack
+block H.gtr.dp
+block H.dc.residualExclPlane
+block H.dc.residual
+
+
+
+#block P.dc.*
+#block H.dc.*
+#block P.gtr.*
+#block H.gtr.*
+
+#block P.gtr.x_fp
+#block P.gtr.y_fp
+#block P.gtr.xp_fp
+#block P.gtr.yp_fp
+
+#block H.gtr.x_fp
+#block H.gtr.y_fp
+#block H.gtr.xp_fp
+#block H.gtr.yp_fp
+
+block P.hod.betanotrack
+
+
+
+
+block P.EDTM.*
+block P.pTRIG1.scaler*
+block P.pTRIG2.scaler*
+block P.pTRIG3.scaler*
+block P.pTRIG4.scaler*
+block P.pTRIG5.scaler*
+block P.pTRIG6.scaler*
+
+
+
+block P.dc.*
+block H.dc.*
+block P.cal.nclust
+block P.cal.ntracks
+block g.evtyp
+
+block CTime.ePiCoinTime_ROC2
+block P.ngcer.npe
+block P.ngcer.npeSum
+
+block P.hod.beta
+block P.hod.goodstarttime
+block P.hgcer.npeSum
+block P.hgcer.npe
+block P.aero.npeSum
+
+
+block P.cal.etottracknorm
+block P.cal.eprtracknorm
+block P.cal.eprtrack
+block P.cal.etot
+block P.cal.etotnorm
+block P.cal.etrack
+block P.cal.etracknorm
+block P.hod.starttime
+
+
+
+block H.cal.etottracknorm
+block H.cal.eprtracknorm
+block H.cal.eprtrack
+block H.cal.etot
+block H.cal.etotnorm
+block H.cal.etrack
+block H.cal.etracknorm
+block H.dc.ntrack
+block H.dc.ntrack
+block H.dc.residualExclPlane
+block H.dc.residual
+
+block H.dc.Ch1.nhit
+block H.dc.Ch1.nhit
+block H.kin.primary.W
+block H.kin.primary.Q2
+block H.kin.primary.x_bj
+block H.kin.primary.omega
+
+
+block H.hod.beta
+block H.hod.goodstarttime
+block H.dc.ntrack
+block H.hod.goodscinhit
+block H.hod.betanotrack
+block H.cer.npe
+block H.cer.npeSum
+block H.dc.x_fp
+block H.dc.y_fp
+block H.dc.xp_fp
+block H.dc.yp_fp
+block H.gtr.x
+block H.gtr.y
+block H.gtr.th
+block H.gtr.ph
+block H.gtr.beta
+block H.gtr.dp
+block H.gtr.p
+
+
+
+block P.gtr.x
+block P.gtr.y
+block P.gtr.th
+block P.gtr.ph
+block P.gtr.beta
+block P.gtr.dp
+block P.gtr.p
+
+
+
+block H.cal.nclust
+block H.dc.InsideDipoleExit
+block P.dc.InsideDipoleExit
+
+block H.hod.starttime
+
+block g.evnum
+block P.dc.tnhit
+block T.coin.pEDTM_tdcTimeRaw
+block T.coin.pTRIG6_ROC2_tdcTimeRaw
+block T.coin.pTRIG2_ROC2_tdcTimeRaw
+block T.coin.pEL_CLEAN_ROC2_tdcTimeRaw
+block T.coin.pEDTM_tdcTime
+block T.coin.pTRIG1_ROC2_tdcTimeRaw
+block T.coin.pTRIG3_ROC2_tdcTimeRaw
+block T.coin.pTRIG5_ROC2_tdcTimeRaw
+block T.coin.pTRIG4_ROC2_tdcTimeRaw
+
+
+
+
+block g.evnum
+block g.evtyp
+block P.dc.1u1.nhit
+block P.dc.1u2.nhit
+block P.dc.1x1.nhit
+block P.dc.1x2.nhit
+block P.dc.1v1.nhit
+block P.dc.1v2.nhit
+block P.dc.2v1.nhit
+block P.dc.2v2.nhit
+block P.dc.2x2.nhit
+block P.dc.2x1.nhit
+block P.dc.2u2.nhit
+block P.dc.2u1.nhit
+block P.hod.goodscinhit
+block H.dc.1u1.nhit
+block H.dc.1u2.nhit
+block H.dc.1x1.nhit
+block H.dc.1x2.nhit
+block H.dc.1v1.nhit
+block H.dc.1v2.nhit
+block H.dc.2v1.nhit
+block H.dc.2v2.nhit
+block H.dc.2x2.nhit
+block H.dc.2x1.nhit
+block H.dc.2u2.nhit
+block H.dc.2u1.nhit
+#block H.bcm.*
+#block P.bcm.*

@@ -1,5 +1,6 @@
 ;SHMS Central Path Lenth from target to focal plane
-SHMS_CentralPathLen = 18.1*100   ; 18.1 m (or 1810 cm)
+;SHMS_CentralPathLen = 18.1*100   ; 18.1 m (or 1810 cm)//=============changed to 20.1 on April 28;2020
+SHMS_CentralPathLen = 20.1*100   ; 20.1 m (or 2010 cm)
 
 
 ; Parameters we need to keep THcHallCSpectrometer Happy
@@ -8,5 +9,10 @@ SHMS_CentralPathLen = 18.1*100   ; 18.1 m (or 1810 cm)
 ;p_recon_coeff_filename = "DATFILES/shms-2011-26cm-monte_q2_m015_rec.dat"
 ;p_recon_coeff_filename = "DATFILES/shms_dipole_2plow.dat"
 ;p_recon_coeff_filename = "DATFILES/shms-2017-optimized.dat"
-p_recon_coeff_filename = "DATFILES/shms-2017-optimized_delta_newfit3.dat"
+;p_recon_coeff_filename = "DATFILES/shms-2017-optimized_delta_newfit3.dat"
+;p_recon_coeff_filename = "DATFILES/shms-2019-newopt-Jan19.dat"
+p_recon_coeff_filename = "DATFILES/shms_newfit_xptar_april2020.dat"
+
+
+
 

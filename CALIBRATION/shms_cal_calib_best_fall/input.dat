@@ -1,8 +1,8 @@
 -13 23	Delta range, %
 0.5 1.5	Beta range
-2.  	Heavy Gas Cherenkov, threshold on signals in p.e.
+5.  	Heavy Gas Cherenkov, threshold on signals in p.e.
 2.  	Aerogel, threshold on signals in p.e.
-0.9	P.cal.etottracknorm, threshold on signals in p.e.
+0.9     calorimeter
 5.	Minimum number of hits per channel required to be calibrated
 0. 3.	Range of uncalibrated energy deposition histogram
 500	Binning of uncalibrated energy deposition histogram
@@ -26,3 +26,10 @@ pcal_arr_gain_cor =  0.00,  0.00,  0.00, 37.46, 24.21, 25.41, 14.60, 32.73, 40.6
                    39.82, 56.21, 39.53, 37.01, 42.92, 41.25, 22.11, 27.69, 45.91, 32.81, 28.12, 45.18, 59.98,  0.00,  0.00,  0.00,
                     0.00, 42.99, 25.68, 60.17, 67.59, 52.29, 28.33, 42.01, 68.30, 42.20, 39.85,  0.00,  0.00,  0.00,  0.00,  0.00,
                     0.00,  0.00,  0.00, 15.01,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,
+
+
+
+
+
+
+

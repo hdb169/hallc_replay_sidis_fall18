@@ -104,7 +104,9 @@ int ScalerCalib::PrintContainer(ScalerContainer sc)
 
   for(SCIterator i = sc.begin(); i != sc.end()-1; ++i)
     {
-      outfile << *i << ", ";
+    
+if(*i>1E6)outfile <<std::fixed<<std::setprecision(0);
+  outfile << *i << ", ";
     }
   
   outfile << sc.back();

@@ -1,4 +1,5 @@
 #real raddeg
+#d///hooodd
 raddeg=3.14159265/180
 #real cminch
 cminch=2.54
@@ -8,7 +9,7 @@ cminch=2.54
 #include "PARAM/GEN/gdebug.param"
 #include "PARAM/GEN/gtarget.param"
 #include "PARAM/GEN/gbeam.param"
-#include "PARAM/GEN/gscalers.param"
+#include "PARAM/GEN/gscalers_fall18.param"
 
 ; General HMS parameter files
 ; Note: hmsflags.param includes spectrometer offsets and options.
@@ -75,7 +76,7 @@ cminch=2.54
 #include "PARAM/SHMS/HODO/phodo_Vpcalib_fall18.param"
 #include "PARAM/SHMS/HGCER/phgcer_calib.param"
 #include "PARAM/SHMS/AERO/paero_calib.param"
-#include "PARAM/SHMS/CAL/pcal_calib_singles_6482.param"
+#include "PARAM/SHMS/CAL/6482_shms_final.param"
 
 
 ;#include "PARAM/SHMS/CAL/pcal_calib_defocused.param"

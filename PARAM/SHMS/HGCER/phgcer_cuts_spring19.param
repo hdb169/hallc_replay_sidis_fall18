@@ -30,4 +30,8 @@ phgcer_adc_tdc_offset   =  200.0
 
 phgcer_adcTimeWindowMin = 6.2, 4.6, 4.2, 4.6
 phgcer_adcTimeWindowMax = 66.2, 64.6, 64.2, 64.6
+
+;PEDESTAL June8,2020 ,7808 Run
+phgcer_PedDefault= 2085, 2145, 2310, 1980
+
  

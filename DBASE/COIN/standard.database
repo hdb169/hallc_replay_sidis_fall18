@@ -13,14 +13,52 @@ g_ctp_trigdet_filename = "PARAM/TRIG/tcoin_fall18_hRF.param"
 5418-6008
 g_ctp_map_filename = "MAPS/COIN/DETEC/coin_fall18.map"
 
-
-
-# CSV experiment
-6009-6999
-g_ctp_parm_filename       = "DBASE/COIN/general_fall18.param"
+#####Lumi scan Mark Jone List
+#D2
+5342-5350
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_11deg_4p2_marklumi.param"
 g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+#carbom
+5351-5358
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_11deg_4p2_marklumi.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+#Dummy
+5359-5366
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_11deg_4p2_marklumi.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+#same copy
+5342-5366
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_11deg_4p2_marklumi.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+
+
+
+
+
+
+
+
+
+
+# CSV experiment
+#6009-6999commented march12,20, to reply good runs only
+#g_ctp_parm_filename       = "DBASE/COIN/general_fall18.param"
+#g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+#g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+#g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
 
 ####the following params are added to include momentum based calorimeter calibration for HMS and SHMS on sep 22, 2019 
 #####Group 1-1, 1-3  pim 
@@ -366,8 +404,8 @@ g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
 
 
-#####Group 12-1, 12-2  pim
-6451-6455
+#####Group 12-1, 12-2  pim added 6449+6450(may be junk, March9,20)
+6449-6455
 g_ctp_parm_filename       = "DBASE/COIN/general_fall18_15deg_3p7.param"
 g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
@@ -414,8 +452,8 @@ g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
 
 
-#####Group 14-7, 14-8, 14-9  pip
-6325-6332
+#####Group 14-7, 14-8, 14-9  pip(6324 may be junk, added March9,20)
+6324-6332
 g_ctp_parm_filename       = "DBASE/COIN/general_fall18_18deg_2p3.param"
 g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
@@ -588,8 +626,22 @@ g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
 
 #shms electron singles
-6483-6485
-g_ctp_parm_filename       = "DBASE/COIN/general_fall18_singles.param"
+6483
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_singles_6483.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+#shms electron singles
+6484
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_singles_6484.param"
+g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
+g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
+g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
+
+#shms electron singles
+6485
+g_ctp_parm_filename       = "DBASE/COIN/general_fall18_singles_6485.param"
 g_ctp_kinematics_filename = "db2/auto_standard_coin_fall18.kinematics"
 g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_fall18.map"
 g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_fall18.param"
@@ -638,11 +690,11 @@ g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
 #################################################
 #################################################
 
-7581-99999
-g_ctp_parm_filename       = "DBASE/COIN/general_spring19.param"
-g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
-g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
-g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
+#7581-99999
+#g_ctp_parm_filename       = "DBASE/COIN/general_spring19.param"
+#g_ctp_kinematics_filename = "db2/auto_standard_coin_spring19.kinematics"
+#g_ctp_map_filename        = "MAPS/COIN/DETEC/coin_spring19.map"
+#g_ctp_trigdet_filename    = "PARAM/TRIG/tcoin_spring19.param"
 
 ############################## momentum based ##################
 #####################19 deg  group 33 -34 ######################

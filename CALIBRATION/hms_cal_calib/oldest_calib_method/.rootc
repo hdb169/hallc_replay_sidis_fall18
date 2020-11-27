@@ -1,0 +1,14 @@
+Modified SHMS and HMS CAL parameter files
+
+hcal.param
+   1) gains for run 303,
+   2) hcal_AdcNegThreshold=0.
+   3) hcal_AdcPosThreshold=0.
+
+pcal.param
+   1) gains for run 464
+   2)pcal_AdcNegThreshold=0.
+   3)pcal_AdcPosThreshold=0.
+   4)pcal_arr_AdcThreshold=0.0
+
+Modified DEF-files for new names for the Cherenkov and Aerogel

@@ -31,3 +31,6 @@ pngcer_adc_tdc_offset   =  200.0
 ;Carlos. Determined from Run JPSi Coin Run 7221.  Feb 16, 2019
 pngcer_adcTimeWindowMin = 20.0, 20.0, 20.0, 30.0
 pngcer_adcTimeWindowMax = 50.0, 50.0, 50.0, 60.0
+
+pngcer_PedDefault= 2082, 2069, 2029, 1956
+

@@ -17,3 +17,16 @@ It prints out
       # of scaler read, 
       average bcm current values for each bcm
       corresponding event number for each scaler event
+NOTE
+
+
+For Many Runs, just replace #list=$1 with txtxtfile, which contains runlist in column form
+
+Copy all the bcmcurrent_RunNum.param to /hallc_replay_sidis_fall18/PARAM/SHMS/BCM/CALIB 
+
+
+
+
+
+
+

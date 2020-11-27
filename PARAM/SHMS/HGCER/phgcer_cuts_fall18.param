@@ -30,4 +30,7 @@ phgcer_adcTimeWindowMax =  36.4,  34.8,  34.4,  34.8
 
 ;phgcer_adcTimeWindowMin = 6.2, 4.6, 4.2, 4.6
 ;phgcer_adcTimeWindowMax = 66.2, 64.6, 64.2, 64.6
- 
+
+;Pdestals:June8 2020Mark's May14 email Run 6500
+phgcer_PedDefault= 2085, 2146, 2310, 1979
+

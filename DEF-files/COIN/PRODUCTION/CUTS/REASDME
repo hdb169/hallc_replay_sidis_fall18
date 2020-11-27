@@ -1,0 +1,4 @@
+I am using the one which also include the edtm events
+The default one does not include edtm
+2020 aug 09
+I should always use edtm events and need to subtract edtm==0 everywhere in the analysis. (Mark)

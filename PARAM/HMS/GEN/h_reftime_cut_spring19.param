@@ -9,7 +9,7 @@
 ; Cut is on reference time per detector.
 
 ;Spring Run, updated March 27, 2019
-
+;default
 hdc_tdcrefcut=-16000.
 hhodo_tdcrefcut=-3300.
 hhodo_adcrefcut=-5000.

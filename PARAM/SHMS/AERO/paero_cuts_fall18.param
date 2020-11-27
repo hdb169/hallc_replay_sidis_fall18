@@ -28,3 +28,10 @@ paero_adcNegTimeWindowMin = 146.6, 144.6, 146.6, 145.8, 144.2, 145.4, 146.2
 
 paero_adcPosTimeWindowMax =  43, 40.2, 38.2, 37.8, 37.0, 37.0, 34.2
 paero_adcNegTimeWindowMax = 236.6, 234.6, 236.6, 235.8, 234.2, 235.4, 236.2
+
+
+;Pedestals:June8,2020
+;6500 Run
+paero_PedPosDefault= 2036, 2040, 1944, 1947, 1917, 1866, 1994
+paero_PedNegDefault= 1842, 2044, 1985, 1964, 2042, 2016, 1997
+

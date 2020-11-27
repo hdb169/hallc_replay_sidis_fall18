@@ -1,0 +1,94 @@
+
+#block g.*
+#block P.*
+#block T.*
+#block H.*
+
+block P.hod.starttime
+block P.hod.TimeHist_StartTime_Peak
+block P.hod.TimeHist_StartTime_NumPeaks
+block P.hod.TimeHist_StartTime_Hits
+block H.hod.starttime
+block H.hod.TimeHist_StartTime_Peak
+block H.hod.TimeHist_StartTime_NumPeaks
+block H.hod.TimeHist_StartTime_Hits
+
+
+
+
+#block H.bcm.*
+#block P.bcm.*
+block g.evnum
+block T.coin.pTRIG*
+block T.coin.hTRIG*
+
+block T.coin.pEDTM*
+block T.coin.hEDTM*
+
+
+
+
+
+
+
+#block P.*
+#block H.*
+block T.coin.pTRIG6_ROC2_tdcTimeRaw
+block P.gtr.p                     
+block H.gtr.p                    
+block P.gtr.beta                                                                                        
+block H.gtr.beta                     
+block H.gtr.dp                                                                                                 
+block P.gtr.dp                                                                                                   
+block P.cal.eprtracknorm                                                                                       
+block P.cal.etottracknorm                                                                                       
+block P.hgcer.npeSum
+block P.ngcer.npeSum                   
+block P.aero.npeSum                                                         
+block H.cal.eprtracknorm                                                    
+block H.cal.etottracknorm                           
+block P.cal.etotnorm                                                          
+block H.cer.npeSum                     
+block CTime.ePiCoinTime_ROC2                   
+block H.kin.primary.omega                    
+block H.kin.primary.W
+block H.kin.primary.Q2
+block H.kin.primary.x_bj
+block P.kin.secondary.th_xq
+block H.kin.*
+block P.kin.*
+block H.hod.goodstarttime                     
+block P.hod.goodstarttime                    
+block P.dc.InsideDipoleExit                     
+block H.dc.InsideDipoleExit                     
+block P.hod.goodscinhit                     
+block P.hod.betanotrack                     
+block P.dc.ntrack                   
+block H.hod.goodscinhit                     
+block H.hod.betanotrack                      
+block H.dc.ntrack                     
+block T.coin.pHODO_RF_tdcMultiplicity                     
+block T.coin.pHODO_RF_tdcTime                     
+block T.coin.pRF_tdcMultiplicity                     
+block T.coin.pRF_tdcTime                      
+block T.coin.hHODO_RF_tdcMultiplicity                     
+block T.coin.hHODO_RF_tdcTime                    
+block T.coin.hRF_tdcMultiplicity                     
+block T.coin.hRF_tdcTime                      
+block P.hod.fpHitsTime                                     
+block H.hod.fpHitsTime                            
+block g.evtyp                    
+block H.gtr.y                     
+block P.gtr.y                     
+block H.cal.etotnorm                    
+block P.cal.etotnorm                     
+block T.coin.pEDTM_tdcTime                    
+block T.coin.pEDTM_tdcTimeRaw
+block T.coin.pEDTM_tdcTime
+block H.gtr.x
+block H.gtr.th
+block H.gtr.ph
+block P.gtr.th
+block P.gtr.ph
+
+#

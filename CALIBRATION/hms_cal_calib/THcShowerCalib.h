@@ -7,6 +7,7 @@
 #include "TVectorD.h"
 #include "TMatrixD.h"
 #include "TDecompLU.h"
+#include "TDecompSVD.h"
 #include "TMath.h"
 #include <iostream>
 #include <fstream>
@@ -102,8 +103,9 @@ class THcShowerCalib {
   Double_t        H_tr_yp;
 
   Double_t        H_tr_tg_dp;
+  Double_t        H_cer_npe[2];//==========================dec10
 
-  Double_t        H_cer_npe[2];
+  Double_t        H_cer_npeSum;
   Double_t        H_tr_beta;
 
   Double_t        H_cal_nclust;
@@ -128,11 +130,15 @@ class THcShowerCalib {
   TBranch* b_H_tr_p;
 
   TBranch* b_H_tr_tg_dp;
- 
-  TBranch* b_H_cer_npe;
+  TBranch* b_H_cer_npe;//==========================dec10
+   
+  TBranch* b_H_cer_npeSum;
   TBranch* b_H_tr_beta;
 
   TBranch* b_H_cal_nclust;
+
+
+
 
   // Quantities for calculations of the calibration constants.
 
@@ -205,9 +211,8 @@ void THcShowerCalib::ReadThresholds() {
   fBetaMin = 0.;
   fBetaMax = 0.;
   fCerMin = 999.;
-  fMinHitCount = 999999;
-
-  for (UInt_t iblk=0; iblk<THcShTrack::fNblks; iblk++) {
+  fMinHitCount = 999999; 
+ for (UInt_t iblk=0; iblk<THcShTrack::fNblks; iblk++) {
     falpha0[iblk] = 0.;
   };
 
@@ -307,9 +312,12 @@ void THcShowerCalib::Init() {
   //Reset ROOT and connect tree file.
 
   gROOT->Reset();
-  char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/spring_final/%s.root",fPrefix.c_str());
-  //char* fname = Form("ROOTfiles/%s.root",fPrefix.c_str());
-  cout << "THcShowerCalib::Init: Root file name = " << fname << endl;
+   char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/hcal_param_frominput_file/%s.root",fPrefix.c_str());
+  // char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/hcal_old_method_calib/%s.root",fPrefix.c_str());
+  // char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/cal_calib_oct22/%s.root",fPrefix.c_str());
+  //char* fname = Form("/lustre/expphy/volatile/hallc/spring17/hdbhatt/group/ROOTfiles/fall_old_calib/%s.root",fPrefix.c_str());
+  //   char* fname = Form("kaonRoot/%s.root",fPrefix.c_str());
+ cout << "THcShowerCalib::Init: Root file name = " << fname << endl;
 
   TFile *f = new TFile(fname);
   f->GetObject("T",fTree);
@@ -320,7 +328,7 @@ void THcShowerCalib::Init() {
   fNstopRequested<0 ? fNstop = fNentries :
                       fNstop = TMath::Min(unsigned(fNstopRequested), fNentries);
   cout << "                      fNstop   = " << fNstop << endl;
-
+  //fNstop=50000;
   // Set branch addresses.
 
   fTree->SetBranchAddress("H.cal.1pr.goodNegAdcPulseInt", H_cal_1pr_aneg_p,
@@ -342,29 +350,44 @@ void THcShowerCalib::Init() {
 			  &b_H_cal_4ta_aneg_p);
   fTree->SetBranchAddress("H.cal.4ta.goodPosAdcPulseInt", H_cal_4ta_apos_p,
 			  &b_H_cal_4ta_apos_p);
-
-  fTree->SetBranchAddress("H.tr.n", &H_tr_n,&b_H_tr_n);
-  fTree->SetBranchAddress("H.tr.x",&H_tr_x,&b_H_tr_x);
-  fTree->SetBranchAddress("H.tr.y",&H_tr_y,&b_H_tr_y);
-  fTree->SetBranchAddress("H.tr.th",&H_tr_xp,&b_H_tr_xp);
-  fTree->SetBranchAddress("H.tr.ph",&H_tr_yp,&b_H_tr_yp);
-  fTree->SetBranchAddress("H.tr.p",&H_tr_p,&b_H_tr_p);
-
-  fTree->SetBranchAddress("H.tr.tg_dp", &H_tr_tg_dp,&b_H_tr_tg_dp);
- 
-  fTree->SetBranchAddress("H.cer.npe", H_cer_npe,&b_H_cer_npe);
-  fTree->SetBranchAddress("H.tr.beta", &H_tr_beta,&b_H_tr_beta);
-
+  //===============================================================================================+dec10 
+  fTree->SetBranchAddress("H.dc.ntrack", &H_tr_n,&b_H_tr_n);
+  fTree->SetBranchAddress("H.dc.x_fp",&H_tr_x,&b_H_tr_x);
+  fTree->SetBranchAddress("H.dc.y_fp",&H_tr_y,&b_H_tr_y);
+  fTree->SetBranchAddress("H.dc.xp_fp",&H_tr_xp,&b_H_tr_xp);
+  fTree->SetBranchAddress("H.dc.yp_fp",&H_tr_yp,&b_H_tr_yp);
+  fTree->SetBranchAddress("H.gtr.p",&H_tr_p,&b_H_tr_p);
+  fTree->SetBranchAddress("H.gtr.dp", &H_tr_tg_dp,&b_H_tr_tg_dp);
+  fTree->SetBranchAddress("H.cer.npeSum", &H_cer_npeSum,&b_H_cer_npeSum);
+  fTree->SetBranchAddress("H.hod.beta", &H_tr_beta,&b_H_tr_beta);
   fTree->SetBranchAddress("H.cal.nclust", &H_cal_nclust,&b_H_cal_nclust);
+
+  //==================================================================
+
+  /* fTree->SetBranchAddress("H.tr.n", &H_tr_n,&b_H_tr_n);//================================================back to old nethod may 19 */
+  /* fTree->SetBranchAddress("H.tr.x",&H_tr_x,&b_H_tr_x); */
+  /* fTree->SetBranchAddress("H.tr.y",&H_tr_y,&b_H_tr_y); */
+  /* fTree->SetBranchAddress("H.tr.th",&H_tr_xp,&b_H_tr_xp); */
+  /* fTree->SetBranchAddress("H.tr.ph",&H_tr_yp,&b_H_tr_yp); */
+  /* fTree->SetBranchAddress("H.tr.p",&H_tr_p,&b_H_tr_p); */
+  /* fTree->SetBranchAddress("H.tr.tg_dp", &H_tr_tg_dp,&b_H_tr_tg_dp); */
+  /*  fTree->SetBranchAddress("H.cer.npe", H_cer_npe,&b_H_cer_npe); */
+  /* fTree->SetBranchAddress("H.tr.beta", &H_tr_beta,&b_H_tr_beta); */
+  /* fTree->SetBranchAddress("H.cal.nclust", &H_cal_nclust,&b_H_cal_nclust); */
+
+
+
+
+
 
   // Histogram declarations.
 
   hEunc = new TH1F("hEunc","Edep/P uncalibrated",fEuncNBin,fEuncLoLo,fEuncHiHi);
-  hEcal = new TH1F("hEcal", "Edep/P calibrated", 200, 0., 2.);
+  hEcal = new TH1F("hEcal", "Edep/P calibrated", 200, 0.0001, 2.);//------------------------------->200,0.,2.
   hDPvsEcal = new TH2F("hDPvsEcal", "#DeltaP versus Edep/P ",
-		       150,0.,1.5, 250,-12.5,12.5);
+		       150,0.0001,1.5, 250,-12.5,12.5);//----------------------------------> 150,0.,1.5, 250,-12.5,12.5)
   hETAvsEPR = new TH2F("hETAvsEPR", "E_{TA} versus E_{PR}",
-		       300,0.,1.5, 300,0.,1.5);
+		       300,0.0001,1.5, 300,0.0001,1.5);//------------------------------------------> 300,0.,1.5, 300,0.,1.5)
 
   // Initialize qumulative quantities.
   
@@ -431,8 +454,8 @@ void THcShowerCalib::CalcThresholds() {
   TF1 *fit = hEunc->GetFunction("gaus");
   Double_t gmean  = fit->GetParameter(1);
   Double_t gsigma = fit->GetParameter(2);
-  fLoThr = gmean - 3.*gsigma;
-  fHiThr = gmean + 3.*gsigma;
+  fLoThr = gmean - 2.*gsigma;
+  fHiThr = gmean + 2.*gsigma;
   cout << "CalcThreshods: fLoThr=" << fLoThr << "  fHiThr=" << fHiThr 
        << "  nev=" << nev << endl;
 
@@ -476,9 +499,13 @@ bool THcShowerCalib::ReadShRawTrack(THcShTrack &trk, UInt_t ientry) {
 		    H_tr_y + H_tr_yp*D_CALO_FP < YMAX ;
   if (!good_trk) return 0;
 
-  bool good_cer = H_cer_npe[0] > fCerMin ||
-                  H_cer_npe[1] > fCerMin ;
+  bool good_cer = H_cer_npeSum > fCerMin ;////===============================================================dec10
   if(!good_cer) return 0;
+
+  /* bool good_cer = H_cer_npe[0] > fCerMin || */
+  /*                 H_cer_npe[1] > fCerMin ; */
+  /* if(!good_cer) return 0; */
+
 
   bool good_beta = H_tr_beta > fBetaMin &&
                    H_tr_beta < fBetaMax ;
@@ -516,7 +543,16 @@ bool THcShowerCalib::ReadShRawTrack(THcShTrack &trk, UInt_t ientry) {
 
       UInt_t nb = j+1 + k*THcShTrack::fNrows;
 
-      if (adc_pos>0. || adc_neg>0.) {
+      if (k==0 && adc_pos>0. && adc_neg>0.) {
+	trk.AddHit(adc_pos, adc_neg, 0., 0., nb);
+      }
+      if (k==1 && adc_pos>0. && adc_neg>0.) {
+	trk.AddHit(adc_pos, adc_neg, 0., 0., nb);
+      }
+      if (k==2 && adc_pos>0. && adc_neg==0.) {
+	trk.AddHit(adc_pos, adc_neg, 0., 0., nb);
+      }
+      if (k==3 && adc_pos>0. && adc_neg==0.) {
 	trk.AddHit(adc_pos, adc_neg, 0., 0., nb);
       }
 
@@ -563,7 +599,7 @@ void THcShowerCalib::ComposeVMs() {
 	for (UInt_t i=0; i<trk.GetNhits(); i++) {
 
 	  THcShHit* hit = trk.GetHit(i);
-	  // hit->Print(cout);
+	  //hit->Print(cout);
 	  
 	  UInt_t nb = hit->GetBlkNumber();
 
@@ -638,13 +674,11 @@ void THcShowerCalib::ComposeVMs() {
   for (UInt_t i=0; i<THcShTrack::fNpmts; i++)
     q0out << fq0[i] << " " << i << endl;
   q0out.close();
-
   ofstream qeout;
   qeout.open("qe.deb",ios::out);
   for (UInt_t i=0; i<THcShTrack::fNpmts; i++)
     qeout << fqe[i] << " " << i << endl;
   qeout.close();
-
   ofstream Qout;
   Qout.open("Q.deb",ios::out);
   for (UInt_t i=0; i<THcShTrack::fNpmts; i++)
@@ -765,7 +799,8 @@ void THcShowerCalib::SolveAlphas() {
 
   // Declare LU decomposition method for the correlation matrix Q.
 
-  TDecompLU lu(Q);
+    TDecompLU lu(Q);
+  //  TDecompSVD lu(Q);
   Double_t d1,d2;
   lu.Det(d1,d2);
   cout << "cond:" << lu.Condition() << endl;
