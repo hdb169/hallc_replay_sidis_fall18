@@ -1,23 +1,19 @@
-block T.coin.pTRIG*Time*
-block P.hod.starttime
-block H.hod.starttime 
-block P.hgcer.npeSum
-block P.hgcer.xAtCer
-block P.hgcer.yAtCer
-
+	block P.hgcer.n*
 #block T.*
-block CTime.CoinTime_RAW_ROC1
-block CTime.CoinTime_RAW_ROC2
+block CTime*
 
-
-#block P.dc.Ch1.nhit*
-#block H.dc.Ch1.nhit*
-
+block P.dc.*
+block H.dc.*
+block P.cal.fly.earray*
+block P.cal.pr.eplane*
 block P.tr.x
 block P.tr.ph
 block P.tr.y
 block P.tr.th
 block P.tr.beta
+block Ndata.P.tr.beta
+
+
 
 
 
@@ -30,7 +26,6 @@ block P.tr.beta
 #block P.*
 #block T.*
 #block H.*
-
 block H.cal.eprtracknorm
 block H.cal.eprtrack
 block H.cal.etot
@@ -38,10 +33,10 @@ block H.cal.etotnorm
 block H.cal.etottracknorm
 block H.cal.etrack
 block H.cal.etracknorm
-#block H.cal.nhits
-#block H.cal.ntracks
-#block H.cal.ytrack
-#block H.cal.xtrack
+block H.cal.nhits
+block H.cal.ntracks
+block H.cal.ytrack
+block H.cal.xtrack
 
 block P.cal.eprtracknorm
 block P.cal.eprtrack
@@ -50,21 +45,39 @@ block P.cal.etotnorm
 block P.cal.etottracknorm
 block P.cal.etrack
 block P.cal.etracknorm
-#block P.cal.nhits
+block P.cal.nhits
 block P.cal.ntracks
-#block P.cal.ytrack
-#block P.cal.xtrack
+block P.cal.ytrack
+block P.cal.xtrack
+
+block P.cal.fly.goodAdcTdcDiffTime
+block P.cal.pr.goodNegAdcTdcDiffTime
+block P.cal.pr.goodPosAdcTdcDiffTime
+
+
+block H.cal.*Diff
 
 
 
+block P.hod.starttime
+block P.hod.TimeHist_StartTime_Peak
+block P.hod.TimeHist_StartTime_NumPeaks
+block P.hod.TimeHist_StartTime_Hits
+block H.hod.starttime
+block H.hod.TimeHist_StartTime_Peak
+block H.hod.TimeHist_StartTime_NumPeaks
+block H.hod.TimeHist_StartTime_Hits
 
 
 
-
-
-
-
+block H.bcm.*
+block P.bcm.*
 block g.evnum
+block T.coin.pTRIG*
+block T.coin.hTRIG*
+
+block T.coin.pEDTM*
+block T.coin.hEDTM*
 
 
 
@@ -96,20 +109,8 @@ block H.kin.primary.W
 block H.kin.primary.Q2
 block H.kin.primary.x_bj
 block P.kin.secondary.th_xq
-block H.kin.primary.Q2
-block H.kin.primary.W
-block H.kin.primary.W2
-block H.kin.primary.nu
-#block H.kin.primary.omega
-#block H.kin.primary.ph_q
-
-block P.kin.secondary.emiss
-block P.kin.secondary.emiss_nuc
-block P.kin.secondary.pmiss
-
-
-
-#block P.kin.*
+block H.kin.*
+block P.kin.*
 block H.hod.goodstarttime                     
 block P.hod.goodstarttime                    
 block P.dc.InsideDipoleExit                     
@@ -120,13 +121,13 @@ block P.dc.ntrack
 block H.hod.goodscinhit                     
 block H.hod.betanotrack                      
 block H.dc.ntrack                     
-#block T.coin.pHODO_RF_tdcMultiplicity                     
+block T.coin.pHODO_RF_tdcMultiplicity                     
 block T.coin.pHODO_RF_tdcTime                     
-#block T.coin.pRF_tdcMultiplicity                     
+block T.coin.pRF_tdcMultiplicity                     
 block T.coin.pRF_tdcTime                      
-#block T.coin.hHODO_RF_tdcMultiplicity                     
+block T.coin.hHODO_RF_tdcMultiplicity                     
 block T.coin.hHODO_RF_tdcTime                    
-#block T.coin.hRF_tdcMultiplicity                     
+block T.coin.hRF_tdcMultiplicity                     
 block T.coin.hRF_tdcTime                      
 block P.hod.fpHitsTime                                     
 block H.hod.fpHitsTime                            
@@ -143,9 +144,5 @@ block H.gtr.th
 block H.gtr.ph
 block P.gtr.th
 block P.gtr.ph
-block P.gtr.beta
-block H.gtr.beta
 
 
-
- 
